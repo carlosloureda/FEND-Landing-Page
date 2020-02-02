@@ -7,6 +7,7 @@ We are viewing some basic content for the nanodegree. We will keep things easy a
 
 - [Installation](#installation)
 - [About](#about)
+- [Data](#data)
 - [Support](#support)
 - [Contributing](#contributing)
 
@@ -19,6 +20,65 @@ This project works without any framework so you only need to download the code a
 The purpose of this project is to have a dinamic landing page that creates a navbar for each section added to this landing page using Javascript.
 
 I am going to fake some content fetched from an API, but it will just be delivered from local code (mocked data), but I will keep in mind the best practices for real projects.
+
+## Data
+
+As of now, we have to locate all the code inside `app.js`, in the future i will split it using babel.
+
+### Section's Data
+
+I stored the data for each section on a `sectionsData` constant, it has 4 sections:
+
+```js
+const sectionsData = {
+  myServicesSection,
+  jobsSection,
+  projectsSection,
+  reviewsSection
+};
+```
+
+Each of these sections has a `title` and a `sections` property. Inside each section we have this data:
+
+```
+    myServicesSection: {
+        id: {
+            id,
+            image,
+            title,
+            content
+        }
+    }
+
+    jobsSection: {
+        id: {
+            id,
+            company,
+            startDate,
+            endDate,
+            position,
+            content
+        }
+    }
+
+    projectsSection: {
+        id: {
+           id,
+           title,
+           image,
+           content
+        }
+    }
+
+    reviewsSection: {
+        id: {
+           id,
+           title,
+           content
+        }
+    }
+
+```
 
 ## Support
 
