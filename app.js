@@ -182,9 +182,73 @@ const sectionsData = {
   reviewsSection
 };
 
-// const mainTag = document.getElementsByTagName("main")[0];
+/* *****************************************************************************
+********************************************************************************
+********************************************************************************
+                            Build Sections
+********************************************************************************
+********************************************************************************
+***************************************************************************** */
 
-// const image = document.createElement("img");
-// image.src = "./images/cohete.png";
+const nameOfVar = obj => Object.keys(obj)[0];
 
-// mainTag.appendChild(image);
+const buildServicesSection = myServicesSection => {
+  const mainSection = document.getElementById("main-section");
+
+  // TODO: add CSS for each element
+
+  // TODO: create an article with name of the id
+  const article = document.createElement("article");
+  article.id = nameOfVar({ myServicesSection });
+
+  const title = document.createElement("h1");
+  title.textContent = myServicesSection.title;
+
+  // TODO: Create a div for the subsections
+  const serviceSection = document.createElement("div");
+
+  mainSection.appendChild(article);
+  mainSection.appendChild(title);
+
+  // TODO: Loop over the sections
+  Object.values(myServicesSection.sections).map(section => {
+    // TODO: Create an element with id
+    const sectionElement = document.createElement("div");
+    // console.log("--> id: ", nameOfVar({ myServicesSection }));
+    sectionElement.id = section.id;
+
+    // TODO: Add image ..
+    const image = document.createElement("img");
+    image.src = section.image;
+    image.alt = section.title;
+
+    // TODO: Add Add title ...
+    const title = document.createElement("h1");
+    title.textContent = section.title;
+
+    // TODO: Needed this div?
+    const content = document.createElement("div");
+    const paragraph = document.createElement("p");
+    paragraph.textContent = section.content;
+    content.appendChild(paragraph);
+    content.appendChild(image);
+    // TODO: Append to `subsection`
+
+    // TODO: search for a more performant solution?
+    sectionElement.appendChild(title);
+    sectionElement.appendChild(content);
+
+    serviceSection.appendChild(sectionElement);
+  });
+
+  mainSection.appendChild(serviceSection);
+};
+// const buildJobsSection
+// const buildProjectsSection
+// const buildReviewsSection
+
+const buildSections = sectionsData => {
+  buildServicesSection(sectionsData.myServicesSection);
+};
+
+buildSections(sectionsData);
