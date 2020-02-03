@@ -6,6 +6,16 @@
 body {
   margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins, sans-serif;
+  margin-top: 0;
+}
 @media (max-width: 375px) and (orientation: portrait) {
   body {
     background-color: orchid;
@@ -33,8 +43,63 @@ body {
   .main-header nav .logo .logo-image {
     width: 80%;
   }
+  /* Home Section */
+  #home {
+    height: 100vh;
+    background-image: linear-gradient(
+      0deg,
+      rgb(98, 189, 252) 0%,
+      rgb(132, 144, 255) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  #home > * {
+    text-align: center;
+  }
+
+  #home .img-container {
+    width: 40%;
+    margin-bottom: 0.5em;
+  }
+
+  #home .img-container .img-fluid {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* margin-right: auto!important;
+    margin-left: auto!important;
+    display: block; */
+  }
+  #home h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+  }
+  #home h1 .second-line {
+    display: block;
+    margin-top: 0.5em;
+  }
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+.text-white {
+  color: #fff;
+}
+.highlight {
+  font-weight: 700;
+}
+#home .banner-paragraph {
+  font-size: 1.2em;
+}
+h1 .highlight {
+  font-weight: 700;
+}
 /*******************************************************************************
 ********************************************************************************
                     Others

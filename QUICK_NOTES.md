@@ -33,6 +33,10 @@ As we don't have any analytics of the devices used for our webiste we will be st
 
 By now i dont see a difference between 360 and 375px so I am going to go with 375px
 
+### Adjust content to height viewport
+
+https://stackoverflow.com/questions/1575141/how-to-make-a-div-100-height-of-the-browser-window
+
 # Color Design
 
 http://paletton.com/#uid=5050-0kfB8H8MiY9mbskY7cqS4Y
