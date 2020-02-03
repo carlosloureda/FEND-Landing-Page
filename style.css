@@ -21,7 +21,7 @@ h6 {
   margin-top: 0;
   line-height: 1.2em;
 }
-@media (max-width: 375px) and (orientation: portrait) {
+@media (max-width: 375px) {
   body {
     background-color: orchid;
     /* background-color: #97726e; */
@@ -51,6 +51,7 @@ h6 {
   /* Home Section */
   .home {
     height: 100vh;
+    min-height: 550px;
     background-image: linear-gradient(
       0deg,
       rgb(98, 189, 252) 0%,
@@ -90,7 +91,7 @@ h6 {
   }
   /* Services Section */
   .services {
-    background-color: white;
+    background-color: #f9f9ff;
     padding-left: 0.5em;
     padding-right: 0.5em;
     padding-top: 120px;
@@ -109,11 +110,54 @@ h6 {
   .services-picture {
     align-self: flex-end;
     padding-bottom: 1em;
-    /* justify-self: flex-end;*/
+  }
+  /* Jobs Section */
+  .jobs {
+    background-color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 120px;
+    text-align: center;
+  }
+  .jobs > h1 {
+    font-size: 2.25em;
+    font-weight: 600;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .jobs-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .jobs .jobs-content h2 {
+    margin-block-end: 0px;
+  }
+  .jobs .jobs-content .job-date {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .jobs .jobs-content h3 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+  }
+  .jobs .jobs-content p.description {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #projects {
+    padding-top: 25px;
   }
 }
 
-.uppercase {
+.text-uppercase {
   text-transform: uppercase;
 }
 .text-white {
@@ -122,11 +166,19 @@ h6 {
 .highlight {
   font-weight: 700;
 }
-#home .banner-paragraph {
+.home .banner-paragraph {
   font-size: 1.2em;
 }
 h1 .highlight {
   font-weight: 700;
+}
+
+.btm-border {
+  background: #dddddd;
+  width: 70%;
+  height: 1px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*******************************************************************************
 ********************************************************************************
