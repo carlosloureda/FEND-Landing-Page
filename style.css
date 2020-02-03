@@ -95,9 +95,10 @@ h6 {
     padding-right: 0.5em;
     padding-top: 120px;
   }
-  .services .service-project-management {
+  .services .services-content {
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
   }
   .services > h1 {
     text-align: center;
