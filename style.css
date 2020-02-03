@@ -5,6 +5,10 @@
 ****************************************************************************** */
 body {
   margin: 0;
+  font-family: Poppins, sans-serif; /*TODO: work on the default font ...*/
+  /*font-size: 14px;
+  /* font-weight: 300;*/
+  line-height: 1.625em;
 }
 
 h1,
@@ -15,6 +19,7 @@ h5,
 h6 {
   font-family: Poppins, sans-serif;
   margin-top: 0;
+  line-height: 1.2em;
 }
 @media (max-width: 375px) and (orientation: portrait) {
   body {
@@ -82,6 +87,28 @@ h6 {
   #home h1 .second-line {
     display: block;
     margin-top: 0.5em;
+  }
+  /* Services Section */
+  #services {
+    background-color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 120px;
+  }
+  #services #service-project-management {
+    display: flex;
+    flex-direction: column;
+  }
+  #services > h1 {
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 600;
+    padding-bottom: 70px;
+  }
+  .services-picture {
+    align-self: flex-end;
+    padding-bottom: 1em;
+    /* justify-self: flex-end;*/
   }
 }
 
