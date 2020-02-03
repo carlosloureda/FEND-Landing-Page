@@ -1,0 +1,66 @@
+/*******************************************************************************
+********************************************************************************
+                    Design for 360px x 640 px (Portrait)
+********************************************************************************
+****************************************************************************** */
+body {
+  margin: 0;
+}
+@media (max-width: 375px) and (orientation: portrait) {
+  body {
+    background-color: orchid;
+    /* background-color: #97726e; */
+    display: flex;
+    flex-direction: column;
+  }
+  .main-header {
+    height: 76px;
+    /* background-color: #371c2c; */
+    background-color: white;
+    color: #97846e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .main-header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-header nav .logo .logo-image {
+    width: 80%;
+  }
+}
+
+/*******************************************************************************
+********************************************************************************
+                    Others
+********************************************************************************
+****************************************************************************** */
+
+/* @media (min-width: 361px) and (max-width: 375px)  {
+  body {
+    background-color: blue;
+  }
+} */
+
+@media (min-width: 376px) and (max-width: 768px) /*and (orientation: portrait) */ {
+  body {
+    background-color: orange;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+  body {
+    background-color: green;
+  }
+}
+
+@media (min-width: 1367px) {
+  body {
+    background-color: yellow;
+  }
+}
