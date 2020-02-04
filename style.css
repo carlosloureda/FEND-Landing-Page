@@ -1,9 +1,13 @@
+/*******************************************************************************
+********************************************************************************
+                Common design for all the devices
+********************************************************************************
+****************************************************************************** */
+
 /* TODO: test breakpoints */
 body {
   margin: 0;
   font-family: Poppins, sans-serif; /*TODO: work on the default font ...*/
-  /*font-size: 14px;
-  /* font-weight: 300;*/
   line-height: 1.625em;
 }
 
@@ -50,7 +54,6 @@ h6 {
   padding-bottom: 1em;
 }
 
-/* Jobs Section */
 /* Jobs Section */
 .jobs {
   background-color: white;
@@ -192,255 +195,6 @@ footer h2 {
   color: white;
 }
 
-/*******************************************************************************
-********************************************************************************
-                Common design for tablets && mobile (360px && 768px)
-********************************************************************************
-****************************************************************************** */
-@media (max-width: 768px) {
-  body {
-    background-color: white;
-    /* background-color: #97726e; */
-    display: flex;
-    flex-direction: column;
-  }
-  .main-header {
-    height: 76px;
-    background-color: #62bdfc;
-    color: #97846e;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .main-header nav {
-    display: flex;
-
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .main-header nav .logo .logo-image {
-    width: 80%;
-  }
-  .main-header .navbar-nav a {
-    display: none;
-  }
-  /* .main-header .navbar-nav-mobile {
-    display: inline-block;
-  } */
-
-  /* REsponisve */
-  .main-header .navbar-nav.responsive {
-    /* display: inline-block; */
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-    /* background: rgb(98, 189, 252, 0.9); */
-    background: rgb(98, 189, 252);
-    position: absolute;
-    top: 95px;
-    left: 0px;
-    width: 100%;
-    z-index: 980;
-    padding-top: 10px;
-  }
-  .main-header .navbar-nav.responsive a {
-    text-decoration: none;
-    color: white;
-    /* margin-right: 30px; */
-    padding-bottom: 30px;
-    padding-left: 50px;
-    font-weight: 600;
-    display: flex;
-    margin: auto;
-  }
-  .main-header .navbar-nav.responsive a:hover {
-    color: black;
-  }
-  /* Home Section */
-  .home {
-    /* height: 100vh; */
-    /* min-height: 550px; */
-    background-image: linear-gradient(
-      0deg,
-      rgb(98, 189, 252) 0%,
-      rgb(132, 144, 255) 100%
-    );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-  }
-  .home > * {
-    text-align: center;
-  }
-
-  .home .img-container {
-    width: 40%;
-    margin-bottom: 0.5em;
-  }
-  .home h1 {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 100;
-  }
-  .home h1 .second-line {
-    display: block;
-    margin-top: 0.5em;
-  }
-  .home .banner-paragraph {
-    font-size: 1.2em;
-  }
-
-  /* Projects Section */
-  .projects {
-    background-color: #f9f9ff;
-    padding-left: 0.5em;
-    padding-top: 120px;
-    /* padding-right: 0.5em;*/
-    /* margin-left: 24px;
-    margin-right: 24px; */
-    padding-left: 39px;
-    padding-right: 39px;
-  }
-
-  .projects-item {
-    padding-left: 15px;
-    padding-right: 15px;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-  }
-  .projects-item h2 {
-    text-transform: capitalize;
-    margin-bottom: 0px;
-    /* font-size: 1.13em; */
-    font-size: 18px;
-  }
-  .projects .description {
-    margin-top: 0px;
-    padding-bottom: 100px;
-    /* font-size: 0.88em; */
-    font-size: 14px;
-    line-height: 22.75px;
-    color: #777777;
-  }
-}
-
-/*******************************************************************************
-********************************************************************************
-                    Design for 360px (Portrait)
-********************************************************************************
-****************************************************************************** */
-
-@media (max-width: 375px) {
-  /* Home Section */
-  .home {
-    /* height: 100vh; */
-    min-height: 550px;
-  }
-  /* Services Section */
-
-  .services .services-content {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-  }
-  .services .services-content .service {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Jobs Section */
-  /* Inherit */
-
-  /* Projects Section */
-  /* Inherit */
-
-  /* Reviews */
-  /* Inherit */
-
-  /* Footer */
-  footer .container .right-footer {
-    padding-top: 30px;
-    margin-bottom: 15px;
-  }
-}
-
-/*******************************************************************************
-********************************************************************************
-                    Design for >= 768px && <1366  (Portrait)
-********************************************************************************
-****************************************************************************** */
-
-@media (min-width: 376px) and (max-width: 768px) {
-  /* Home Section */
-  body {
-    font-size: 22.5px;
-  }
-
-  /* Home Section */
-  .home {
-    padding-bottom: 30px;
-  }
-
-  /* Services Section */
-  .services .services-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
-
-  /* Jobs Section */
-
-  .jobs-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    justify-content: space-evenly;
-  }
-  .jobs-content .job-item {
-    max-width: 330px;
-  }
-
-  /* Reviews section */
-  .reviews .reviews-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: repeat(2, 1fr); */
-    grid-auto-rows: minmax(min-content, max-content);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-  }
-
-  /* Footer */
-  footer .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  footer .container .left-footer {
-    /* width: 50%; */
-    flex: 0.5;
-  }
-  footer .container .right-footer {
-    /* width: 50%; */
-    flex: 0.5;
-    align-self: center;
-  }
-}
-
 /* Scroll to top button*/
 .scroll-top-btn {
   position: fixed;
@@ -557,6 +311,257 @@ h1 .highlight {
   transform: scale(0.8);
 }
 
+/*******************************************************************************
+********************************************************************************
+                Common design for tablets && mobile (360px && 768px)
+********************************************************************************
+****************************************************************************** */
+@media (max-width: 768px) {
+  body {
+    background-color: white;
+    /* background-color: #97726e; */
+    display: flex;
+    flex-direction: column;
+  }
+  .main-header {
+    height: 76px;
+    background-color: #62bdfc;
+    color: #97846e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .main-header nav {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-header nav .logo .logo-image {
+    width: 80%;
+  }
+  .main-header .navbar-nav a {
+    display: none;
+  }
+
+  /* nav bar */
+  .main-header .navbar-nav.responsive {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /* background: rgb(98, 189, 252, 0.9); */
+    background: rgb(98, 189, 252);
+    position: absolute;
+    top: 95px;
+    left: 0px;
+    width: 100%;
+    z-index: 980;
+    padding-top: 10px;
+  }
+  .main-header .navbar-nav.responsive a {
+    text-decoration: none;
+    color: white;
+    /* margin-right: 30px; */
+    padding-bottom: 30px;
+    padding-left: 50px;
+    font-weight: 600;
+    display: flex;
+    margin: auto;
+  }
+  .main-header .navbar-nav.responsive a:hover {
+    color: black;
+  }
+
+  /* Home Section */
+  .home {
+    /* height: 100vh; */
+    /* min-height: 550px; */
+    background-image: linear-gradient(
+      0deg,
+      rgb(98, 189, 252) 0%,
+      rgb(132, 144, 255) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .home > * {
+    text-align: center;
+  }
+
+  .home .img-container {
+    width: 40%;
+    margin-bottom: 0.5em;
+  }
+  .home h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 100;
+  }
+  .home h1 .second-line {
+    display: block;
+    margin-top: 0.5em;
+  }
+  .home .banner-paragraph {
+    font-size: 1.2em;
+  }
+
+  /* Projects Section */
+  .projects {
+    background-color: #f9f9ff;
+    padding-left: 0.5em;
+    padding-top: 120px;
+    /* padding-right: 0.5em;*/
+    /* margin-left: 24px;
+    margin-right: 24px; */
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+
+  .projects-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+  }
+  .projects-item h2 {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    /* font-size: 1.13em; */
+    font-size: 18px;
+  }
+  .projects .description {
+    margin-top: 0px;
+    padding-bottom: 100px;
+    /* font-size: 0.88em; */
+    font-size: 14px;
+    line-height: 22.75px;
+    color: #777777;
+  }
+}
+
+/*******************************************************************************
+********************************************************************************
+                    Design for mobile 360px (Portrait)
+********************************************************************************
+****************************************************************************** */
+
+@media (max-width: 375px) {
+  /* Home Section */
+  .home {
+    /* height: 100vh; */
+    min-height: 550px;
+  }
+  /* Services Section */
+
+  .services .services-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .services .services-content .service {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Jobs Section */
+  /* Inherit */
+
+  /* Projects Section */
+  /* Inherit */
+
+  /* Reviews */
+  /* Inherit */
+
+  /* Footer */
+  footer .container .right-footer {
+    padding-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+/*******************************************************************************
+********************************************************************************
+                    Design for tablets >= 768px && <376  (Portrait)
+********************************************************************************
+****************************************************************************** */
+
+@media (min-width: 376px) and (max-width: 768px) {
+  /* Home Section */
+  body {
+    font-size: 22.5px;
+  }
+
+  /* Home Section */
+  .home {
+    padding-bottom: 30px;
+  }
+
+  /* Services Section */
+  .services .services-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  /* Jobs Section */
+
+  .jobs-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+  }
+  .jobs-content .job-item {
+    max-width: 330px;
+  }
+
+  /* Reviews section */
+  .reviews .reviews-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  /* Footer */
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .container .left-footer {
+    /* width: 50%; */
+    flex: 0.5;
+  }
+  footer .container .right-footer {
+    /* width: 50%; */
+    flex: 0.5;
+    align-self: center;
+  }
+}
+
+/*******************************************************************************
+********************************************************************************
+                      Design for Desktop > 768px
+********************************************************************************
+****************************************************************************** */
 @media (min-width: 769px) {
   /* Main header */
   .main-header {
