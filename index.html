@@ -4,17 +4,437 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Landing Page - FEND Udacity</title>
+    <title>Carlos Loureda: FrontEnd Conulting & Mentoring</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./reset.css" /> -->
+
     <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" src="src/app.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <h1>Landing Page for project Front End Nanodegree Udacity</h1>
-    <main>
-      <h2>Inside main</h2>
-    </main>
+    <header class="main-header">
+      <nav>
+        <div class="logo">
+          <img
+            class="logo-image"
+            src="./images/logo.png"
+            alt="Consulting & Mentoring"
+          />
+        </div>
+        <div id="navigation">
+          <i class="fa fa-bars fa-2x"></i>
+        </div>
+      </nav>
+    </header>
+    <section id="home" class="home">
+      <div class="img-container">
+        <img class="img-fluid" src="./images/header-img.png" />
+      </div>
+      <h1 class="text-white">
+        Hi, I’m <span class="text-uppercase highlight">Carlos Loureda</span>
+        <span class="second-line">FrontEnd Engineer, Consultant & Mentor</span>
+      </h1>
+      <p class="text-white banner-paragraph">
+        For 10 years I have been working with Software Development, and in close
+        contact with companies needs, helping building startups and helping them
+        grow
+      </p>
+    </section>
+    <section id="services" class="services">
+      <h1>Have a look at my top Services</h1>
+      <article class="services-content">
+        <img
+          class="services-picture"
+          src="./images/rocket.png"
+          alt="A red & white rocket in the space"
+          width="60px"
+        />
+        <h2>Project Management</h2>
+        <p>
+          Co-founding my own startup, in which I started as a worker and sole
+          developer, I have been able to understand the needs that requires an
+          ambitious project. Once the company settled, I have led teams of up to
+          10 people to develop up to 3 different products at once.
+        </p>
+      </article>
+      <article id="mentoring" class="services-content">
+        <img
+          class="services-picture"
+          src="./images/mentoring.png"
+          alt="A red & white rocket in the space"
+          width="60px"
+        />
+        <h2>Mentoring</h2>
+        <p>
+          I have always liked to exchange knowledge and get to know different
+          points of view. This past year I have developed these skills as a
+          React/Redux/React Native mentor in Udacity as well as in my locality.
+          Something that continues to allow me to grow by learning from others.
+        </p>
+      </article>
+      <article id="web-development" class="services-content">
+        <img
+          class="services-picture"
+          src="./images/web-dev.png"
+          alt="A red & white rocket in the space"
+          width="60px"
+        />
+        <h2>Web Development</h2>
+        <p>
+          The web came first, but how it's evolving! We have to adapt to these
+          times when Javascript is advancing and improving the way we set up our
+          websites. Nowadays we have to talk about JAMStack, GraphQL,
+          monorepositories and more topics.
+        </p>
+      </article>
+      <article id="mobile-development" class="services-content">
+        <img
+          class="services-picture"
+          src="./images/mobile-app.png"
+          alt="A red & white rocket in the space"
+          width="60px"
+        />
+        <h2>Mobile Development</h2>
+        <p>
+          The development of an ecosystem based on mobile applications is
+          increasingly necessary. It is no longer enough to have a website, now
+          we have to provide real multiplatform solutions. We can make
+          developments that run perfectly in both Android and iOS
+        </p>
+      </article>
+    </section>
+    <section id="jobs" class="jobs">
+      <h1>Jobs</h1>
+      <article class="jobs-content">
+        <h2 class="text-uppercase">udacity</h2>
+        <p class="job-date">March 2019 to Present</p>
+        <h3>
+          React Mentor (Independent Consultant)
+        </h3>
+        <p class="description">
+          As a consultant for educational platforms such as Udacity. I use my
+          specialized knowledge in the field of ReactJS and algorithms and my
+          strong communication and training skills to provide personalized
+          guidance and advice to students.
+        </p>
+      </article>
+      <div class="btm-border"></div>
+      <article class="jobs-content">
+        <h2 class="text-uppercase">domesting</h2>
+        <p class="job-date">January 2016 to October 2019</p>
+        <h3>
+          Chief Technology Officer & Co-Founder
+        </h3>
+        <p class="description">
+          Development and expansion of the cloud software solution for the
+          cleaning sector. Development of a platform and mobile application for
+          an enterprise cleaning solution. Multiplatform Hospitality
+          development. Management of a human team of more than 10 people.
+        </p>
+      </article>
+      <div class="btm-border"></div>
+      <article class="jobs-content">
+        <h2 class="text-uppercase">domesting</h2>
+        <p class="job-date">April 2014 to December 2015</p>
+        <h3>
+          Software Developer
+        </h3>
+        <p class="description">
+          MVP development of international cleaning software (UK, Spain and
+          Portugal) Yii Framework, JQuery, Javascript, HTML, CSS, Git
+        </p>
+      </article>
+      <div class="btm-border"></div>
+      <article class="jobs-content">
+        <h2 class="text-uppercase">upwork</h2>
+        <p class="job-date">September 2010 to April 2014</p>
+        <h3>
+          Software Developer
+        </h3>
+        <p class="description">
+          Web Development: Yii Framework, Python/Django/Flask. Web Scraping.
+          Selenium, Python, Scrappy
+        </p>
+      </article>
+      <div class="btm-border"></div>
+      <article class="jobs-content">
+        <h2 class="text-uppercase">freelance</h2>
+        <p class="job-date">February 2007 to June 2011</p>
+        <h3>
+          Software Developer
+        </h3>
+        <p class="description">
+          Maintenance and improvement of systems implemented in Cobol and
+          migration of some to web technologies with Java.
+        </p>
+      </article>
+    </section>
+    <section id="projects" class="projects">
+      <header class="menu-content">
+        <h1>Latest Done Projects</h1>
+        <p>Bellow litte samples of my work</p>
+      </header>
+      <article class="projects-item">
+        <img
+          class="img-fluid"
+          src="./images/connect.png"
+          alt="Landing page of connect showing a hand holding a smartphone running the connet application and some copy text and call to action buttons"
+        />
+        <h2 class="text-uppercase pt-30 pb-30">connect</h2>
+        <p class="description">
+          At my previous startup (Domesting SL) as co-founder I had to transform
+          the previous solution for domestic cleaning services into a solution
+          for the cleaning companies. With connect we didn't focus only only on
+          freelancer cleaners, we added a solution for all kind of cleaning
+          companies and facilities.
+        </p>
+      </article>
+      <article class="projects-item">
+        <img
+          class="img-fluid"
+          src="./images/facilities.png"
+          alt="dashboard of the facilities platform showing a cleaning review from the reviewer role accesss"
+        />
+        <h2 class="text-uppercase pt-30 pb-30">Domesting Facilities</h2>
+        <p class="description">
+          An adjustment in the connect page where we have been able to help
+          large companies or facilities to manage the revision of the cleaning
+          of their establishments.
+        </p>
+      </article>
+      <article class="projects-item">
+        <img
+          class="img-fluid"
+          src="./images/hospitality.png"
+          alt="First page of a comercial presentation of Hospitality v1.0 product, showing the reviewer role view for seeing the rooms to clean today"
+        />
+        <h2 class="text-uppercase  pt-30 pb-30">Hospitality</h2>
+        <p class="description">
+          The crown jewel. The definitive solution for the management of
+          housekeeping and maintenance of hotels, as well as its communication
+          with frontdesk. In this project I was the CTO and helped in the
+          product design to be able to assemble a total solution for hotels,
+          both web and mobile. I managed an international team of 10 people and
+          was a fundamental part in the development and implementation of the
+          mobile application.
+        </p>
+      </article>
+      <article class="projects-item">
+        <img
+          class="img-fluid"
+          src="./images/domesting_project.png"
+          alt="Ladning page of Domesting showing a cleaned saloon image with a grey couch and 2 buttons for hiring a cleaning or signing up as a cleaner"
+        />
+        <h2 class="text-uppercase  pt-30 pb-30">Domesting</h2>
+        <p class="description">
+          Domesting.com was the first website I built on the startup I
+          co-founded. At that time I was the unique developer in the first
+          stages of the company. I built a complete website to provide final
+          users and domestic cleaner a tool for them to manage the domesting
+          cleaning services.
+        </p>
+      </article>
+    </section>
+    <section id="reviews" class="reviews">
+      <h1 class="text-centered">Some of my latest Reviews</h1>
+      <article class="reviews-item ml-15 mr-15 pt-30 pb-15 pl-30 pr-30">
+        <h2 class="text-centered">
+          <a
+            href="https://www.linkedin.com/in/carlos-loureda-parrado/detail/recommendation/write/"
+            target="_blank"
+          >
+            Patricia Figueroa Rodríguez
+          </a>
+        </h2>
+        <p class="review">
+          Carlos stands out for being a great partner and of course a great
+          friend! There is no doubt that he has made Domesting a dynamic and fun
+          place to work and where everyone can participate. He has great
+          qualities to lead a team but what he stands out for is his personal
+          skills, he always tries to be fair in his decisions by empathizing
+          with people and reaching a consensus. He has managed to create an
+          organized and competent technical team, always promoting the work and
+          effort of the youngest and helping them to grow in their careers. His
+          joy and commitment have managed to infect the whole team with the
+          necessary enthusiasm for the project to go ahead even at the lowest
+          moments. I am taking a friend with me for life and I hope that in the
+          future we will work together again!
+        </p>
+      </article>
+      <article class="reviews-item ml-15 mr-15 pt-30 pb-15 pl-30 pr-30">
+        <h2 class="text-centered">
+          <a
+            href="https://www.linkedin.com/in/carlos-loureda-parrado/detail/recommendation/write/"
+            target="_blank"
+          >
+            Rubén Costa Martínez
+          </a>
+        </h2>
+        <p class="review">
+          Carlos is clearly interested in helping anyone grow in their career.
+          As a Domesting CTO, his energy, team organization and dedication to
+          the project predominate. Together, we have managed to create, from the
+          technical point of view, a good application without much prior
+          knowledge about the technologies, but this did not pose any problem
+          for him since he is capable of adapting to any obstacle. It's nice to
+          have someone on your side who is so interested in what's new in the
+          sector, so it's impossible to become obsolete.
+        </p>
+      </article>
+      <article class="reviews-item ml-15 mr-15 pt-30 pb-15 pl-30 pr-30">
+        <h2 class="text-centered">
+          <a
+            href="https://www.linkedin.com/in/carlos-loureda-parrado/detail/recommendation/write/"
+            target="_blank"
+          >
+            Alex González Rodríguez
+          </a>
+        </h2>
+        <p class="review">
+          Carlos has been, without a doubt, an indispensable pillar for the
+          success of Domesting. He is a tireless worker, with an admirable
+          passion for his work. His dedication and commitment even at the lowest
+          moments have infected us with the necessary enthusiasm for the project
+          to go ahead. With his preparation and technical skills beyond any
+          doubt, I want to highlight his personal skills. He is a colleague with
+          great empathy, always ready to help the rest of the team. His optimism
+          has allowed him to maintain an ideal working environment. But, really,
+          if anything has captivated me about Carlos during my time at
+          Domesting, it has been both his organizational capacity and his
+          leadership skills. He has known how to assume responsibilities in the
+          most critical moments, taking decisions firmly and facilitating the
+          understanding of the objectives throughout the organization. He has
+          always fought for team cohesion and the involvement of all
+          departments. It has created a technical team that is up to the task,
+          promoting the proactivity of the youngest and getting involved in the
+          training of its employees, motivating them and guiding them in their
+          professional growth. He has proven himself capable of getting the most
+          out of his teams, maintains a high level of exigency while providing
+          security and makes you feel valued, something for which his colleagues
+          remember him with great esteem. At his side, I've learned that
+          dedication and sacrifice always have results. I want my future job to
+          bring me more bosses (and friends) like hi.
+        </p>
+      </article>
+      <article class="reviews-item ml-15 mr-15 pt-30 pb-15 pl-30 pr-30">
+        <h2 class="text-centered">
+          <a
+            href="https://www.linkedin.com/in/carlos-loureda-parrado/detail/recommendation/write/"
+            target="_blank"
+          >
+            Patricia Saco
+          </a>
+        </h2>
+        <p class="review">
+          I would like to write a recommendation that will help Carlos achieve
+          what he is proposing at the moment at a professional level, but I
+          doubt that he can compete with his own persistence. Carlos is a
+          tireless worker, who is always looking for a way to surpass himself,
+          others, and mainly to surprise with solutions in the most unexpected
+          moments. I would not hesitate to have him as a partner and I am left
+          with the desire to be able to undertake something in common. Who
+          knows..
+        </p>
+      </article>
+    </section>
+    <footer>
+      <div class="container pr-15 pl-15">
+        <div>
+          <p class="footer-text">
+            Copyright
+            <script>
+              document.write(`©${new Date().getFullYear()}`);
+            </script>
+            All rights reserved This website is made with
+            <i class="fa fa-heart"></i> by
+            <span>Carlos Loureda</span>
+          </p>
+        </div>
+        <div>
+          Icons made by
+          <a href="https://www.flaticon.com/authors/freepik" target="_blank"
+            >Freepik</a
+          >,
+          <a href="https://www.flaticon.com/authors/eucalyp" target="_blank"
+            >Eucalyp</a
+          >,
+          <a href="https://www.flaticon.com/authors/flat-icons" target="_blank"
+            >Flat Icons</a
+          >
+        </div>
+        <div class="pt-30 mb-15">
+          <h2>Follow me</h2>
+          <p>Let us be social</p>
+          <a href="https://twitter.com/CarlosLoureda" target="_blank">
+            <i class="fa fa-twitter mr-15" color="blue"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/carlos-loureda-parrado"
+            target="_blank"
+          >
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <button id="scroll-top-btn" class="scroll-top-btn">
+        <i class="fa fa-arrow-up"></i>
+      </button>
+    </footer>
     <script>
-      //   console.log(months);
+      // TODO: Move this to app.js file
+      /**
+        Holds all the logic for the button to scroll up
+      */
+      const scrollToTopHanlder = targetId => {
+        let intervalId = null;
+
+        /* This does the scroll */
+        scrollToTop = () => {
+          const scrollStepInPx = "100";
+          if (window.pageYOffset === 0) {
+            clearInterval(intervalId);
+          }
+
+          window.scroll(0, window.pageYOffset - scrollStepInPx);
+        };
+
+        /* This sets the interval after which we do the scroll calling
+        `scrollToTop` function */
+        scrollToTopEvent = () => {
+          const delayInMs = "10.0";
+          intervalId = setInterval(scrollToTop, delayInMs);
+        };
+
+        /* Attach the `scrollToTopEvent` event to the NodeElement in charge of
+        managing this event by users input */
+        document
+          .getElementById(targetId)
+          .addEventListener("click", scrollToTopEvent);
+
+        /* We want to hide the scroll to top button when there is not enough scroll */
+        window.onscroll = () => {
+          const vh = Math.max(
+            document.documentElement.clientHeight,
+            window.innerHeight || 0
+          );
+          var scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
+
+          if (scrollTop >= vh) {
+            document.getElementById("scroll-top-btn").style.opacity = "0.3";
+            document.getElementById("scroll-top-btn").style.visibility =
+              "visible";
+          } else {
+            document.getElementById("scroll-top-btn").style.visibility =
+              "hidden";
+          }
+        };
+      };
+      scrollToTopHanlder("scroll-top-btn");
     </script>
   </body>
   <script src="app.js"></script>
