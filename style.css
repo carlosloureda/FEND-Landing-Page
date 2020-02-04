@@ -18,6 +18,180 @@ h6 {
   line-height: 1.2em;
 }
 
+/* Services Section */
+.services {
+  background-color: #f9f9ff;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.services > h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 70px;
+  margin-bottom: 10px;
+}
+.services .services-content .service {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 22.75px;
+}
+.services .services-content .service h2 {
+  font-size: 24px;
+}
+.services .services-content .service p {
+  font-size: 18px;
+  color: #777777;
+}
+.services-picture {
+  align-self: flex-end;
+  padding-bottom: 1em;
+}
+
+/* Jobs Section */
+/* Jobs Section */
+.jobs {
+  background-color: white;
+  padding-left: 0.5em;
+  padding-bottom: 80px;
+  padding-right: 0.5em;
+  padding-top: 120px;
+  text-align: center;
+}
+.jobs > h1 {
+  font-size: 2.25em;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+.jobs-content .job-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.jobs .jobs-content .job-item h2 {
+  /* margin-block-end: 0px; */
+  font-size: 24px;
+}
+.jobs .jobs-content .job-item .job-date {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #777777;
+}
+.jobs .jobs-content .job-item h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+.jobs .jobs-content .job-item p.description {
+  font-size: 14px;
+  line-height: 22.75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #777777;
+}
+
+/* Reviews */
+.reviews {
+  background-color: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 120px;
+}
+.reviews h1 {
+  /* font-size: 2.25em; */
+  font-size: 36px;
+  line-height: 43.2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 70px;
+}
+
+/* TODO: Show less or more button (on React I made this: https://github.com/carlosloureda/personal-brand-site/blob/master/src/components/Review/Review.js) */
+.reviews-item {
+  background-color: #f9f9ff;
+  margin-bottom: 30px;
+}
+.reviews-item:hover {
+  background-image: linear-gradient(
+    0deg,
+    rgb(98, 189, 252) 0%,
+    rgb(132, 144, 255) 100%
+  );
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.reviews-item h2 {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  /* font-size: 1.13em; */
+  font-size: 20px;
+  line-height: 22.75px;
+  padding-bottom: 20px;
+}
+.reviews-item h2 > a {
+  text-decoration: none;
+  color: inherit;
+}
+.reviews-item .review {
+  margin-top: 0px;
+  font-size: 0.88em;
+  line-height: 22.75px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #777777;
+}
+
+/* Projects Section */
+.projects .menu-content {
+  padding-bottom: 70px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+.projects .menu-content h1 {
+  font-size: 2.25em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.projects .menu-content p {
+  margin-top: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+/* Footer section */
+footer {
+  background-color: #222222;
+  color: #777777;
+}
+footer .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+footer .footer-text {
+  margin-bottom: 16px;
+  font-size: 0.88em;
+}
+footer .footer-text span,
+i {
+  color: #8490ff;
+}
+footer a {
+  text-decoration: none;
+  color: #8490ff;
+}
+footer h2 {
+  color: white;
+}
+
 /*******************************************************************************
 ********************************************************************************
                 Common design for tablets && mobile (360px && 768px)
@@ -32,23 +206,28 @@ h6 {
   }
   .main-header {
     height: 76px;
-    /* background-color: #371c2c; */
-    background-color: white;
+    background-color: #62bdfc;
     color: #97846e;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .main-header nav {
     display: flex;
+
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  .main-header nav .logo .logo-image {
-    width: 80%;
+  .main-header .navbar-nav {
+    display: none;
+  }
+  .main-header .navbar-nav-mobile {
+    display: inline-block;
   }
   /* Home Section */
   .home {
@@ -86,85 +265,6 @@ h6 {
     font-size: 1.2em;
   }
 
-  /* Services Section */
-  .services {
-    background-color: #f9f9ff;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-  .services > h1 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 600;
-    padding-bottom: 70px;
-    margin-bottom: 10px;
-  }
-  .services .services-content .service {
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 22.75px;
-  }
-  .services .services-content .service h2 {
-    font-size: 24px;
-  }
-  .services .services-content .service p {
-    font-size: 18px;
-    color: #777777;
-  }
-  .services-picture {
-    align-self: flex-end;
-    padding-bottom: 1em;
-  }
-
-  /* Jobs Section */
-  .jobs {
-    background-color: white;
-    padding-left: 0.5em;
-    padding-bottom: 80px;
-    padding-right: 0.5em;
-    padding-top: 120px;
-    text-align: center;
-  }
-  .jobs > h1 {
-    font-size: 2.25em;
-    font-weight: 600;
-    padding-bottom: 20px;
-    margin-bottom: 0px;
-  }
-
-  .jobs-content .job-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .jobs .jobs-content .job-item h2 {
-    /* margin-block-end: 0px; */
-    font-size: 24px;
-  }
-  .jobs .jobs-content .job-item .job-date {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 14px;
-    font-weight: 300;
-    color: #777777;
-  }
-  .jobs .jobs-content .job-item h3 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
-    margin-bottom: 0px;
-    font-size: 18px;
-  }
-  .jobs .jobs-content .job-item p.description {
-    font-size: 14px;
-    line-height: 22.75px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: #777777;
-  }
-
   /* Projects Section */
   .projects {
     background-color: #f9f9ff;
@@ -177,22 +277,6 @@ h6 {
     padding-right: 39px;
   }
 
-  .projects .menu-content {
-    padding-bottom: 70px;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-  }
-  .projects .menu-content h1 {
-    font-size: 2.25em;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .projects .menu-content p {
-    margin-top: 0;
-    font-weight: 300;
-    margin-bottom: 10px;
-  }
   .projects-item {
     padding-left: 15px;
     padding-right: 15px;
@@ -213,81 +297,6 @@ h6 {
     font-size: 14px;
     line-height: 22.75px;
     color: #777777;
-  }
-
-  /* Reviews */
-  .reviews {
-    background-color: white;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 120px;
-  }
-  .reviews h1 {
-    /* font-size: 2.25em; */
-    font-size: 36px;
-    line-height: 43.2px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    padding-bottom: 70px;
-  }
-
-  /* TODO: Show less or more button (on React I made this: https://github.com/carlosloureda/personal-brand-site/blob/master/src/components/Review/Review.js) */
-  .reviews-item {
-    background-color: #f9f9ff;
-    margin-bottom: 30px;
-  }
-  .reviews-item:hover {
-    background-image: linear-gradient(
-      0deg,
-      rgb(98, 189, 252) 0%,
-      rgb(132, 144, 255) 100%
-    );
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-  }
-  .reviews-item h2 {
-    text-transform: capitalize;
-    margin-bottom: 0px;
-    /* font-size: 1.13em; */
-    font-size: 20px;
-    line-height: 22.75px;
-    padding-bottom: 20px;
-  }
-  .reviews-item h2 > a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .reviews-item .review {
-    margin-top: 0px;
-    font-size: 0.88em;
-    line-height: 22.75px;
-    font-size: 14px;
-    font-weight: 300;
-    color: #777777;
-  }
-
-  /* Footer section */
-  footer {
-    background-color: #222222;
-    color: #777777;
-  }
-  footer .container {
-    padding-top: 100px;
-  }
-  footer .footer-text {
-    margin-bottom: 16px;
-    font-size: 0.88em;
-  }
-  footer .footer-text span,
-  i {
-    color: #8490ff;
-  }
-  footer a {
-    text-decoration: none;
-    color: #8490ff;
-  }
-  footer h2 {
-    color: white;
   }
 }
 
@@ -508,26 +517,180 @@ h1 .highlight {
   padding: 1px;
 }
 
-/*******************************************************************************
-********************************************************************************
-                    Others
-********************************************************************************
-****************************************************************************** */
-
-/* @media (min-width: 361px) and (max-width: 375px)  {
-  body {
-    background-color: blue;
-  }
-} */
-
-/* @media (min-width: 769px) and (max-width: 1366px) {
-  body {
-    background-color: green;
-  }
+.img-shrinkable {
+  transition: transform 0.5s ease;
+}
+.img-shrinkable:hover {
+  transform: scale(0.8);
 }
 
-@media (min-width: 1367px) {
-  body {
-    background-color: yellow;
+@media (min-width: 769px) {
+  /* Main header */
+  .main-header {
+    height: 76px;
+    /* background-color: #371c2c; */
+    /* background-color: white; */
+    background-color: #62bdfc;
+    color: #97846e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
   }
-} */
+  .main-header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 349px;
+    padding-left: 349px;
+  }
+  .main-header nav .logo .logo-image {
+    width: 80%;
+  }
+  .main-header .navbar-nav {
+    display: inline-block;
+  }
+  .main-header .navbar-nav-mobile {
+    display: none;
+  }
+  .main-header .navbar-nav a {
+    text-decoration: none;
+    color: white;
+    margin-right: 30px;
+    font-weight: 600;
+  }
+  .main-header .navbar-nav a:hover {
+    color: black;
+  }
+
+  /* Home Sections */
+  .home {
+    background-image: linear-gradient(
+      0deg,
+      rgb(98, 189, 252) 0%,
+      rgb(132, 144, 255) 100%
+    );
+    display: flex;
+    flex-direction: flow;
+    padding-right: 349px;
+    padding-left: 349px;
+    min-height: 750px;
+  }
+  .home .description {
+    align-self: flex-start;
+    padding-top: 15%;
+  }
+  .home .description h1 span.first-line {
+    display: block;
+    padding-top: 20px;
+    line-height: 0.5em;
+    font-size: 1.5em;
+  }
+  .home .img-container {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+  .home h1 {
+    font-size: 2em;
+    font-weight: 100;
+  }
+  .home h1 .second-line {
+    display: block;
+    margin-top: 0.5em;
+  }
+  .home .banner-paragraph {
+    font-size: 1.2em;
+    margin-top: 60px;
+  }
+  /* Services Section */
+  .services {
+    padding-right: 349px;
+    padding-left: 349px;
+  }
+  .services .services-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  /* Jobs Section */
+
+  .jobs-content {
+    margin-right: 349px;
+    margin-left: 349px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+  }
+  .jobs-content .job-item {
+    max-width: 330px;
+  }
+
+  /* Projects Section */
+  .projects {
+    background-color: #f9f9ff;
+    /* padding-left: 0.5em; */
+    padding-top: 120px;
+    padding-right: 349px;
+    padding-left: 349px;
+  }
+  .projects .projects-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  .projects .projects-item.reverse {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .projects .projects-item .img-fluid {
+    width: 50%;
+  }
+
+  .projects .projects-item .project-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 22.75px;
+  }
+  .projects .projects-item .description {
+    color: #777777;
+  }
+
+  /* Reviews section */
+  .reviews {
+    margin-right: 349px;
+    margin-left: 349px;
+  }
+  .reviews .reviews-content {
+    display: grid;
+    /* TODO: make columns dynamic to have more columns */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  /* Footer */
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .container .left-footer {
+    /* width: 50%; */
+    flex: 0.5;
+  }
+  footer .container .right-footer {
+    /* width: 50%; */
+    flex: 0.5;
+    align-self: center;
+  }
+}

@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <!-- TODO: Make it work for showing dropdown on small devices and collapse on too many items -->
     <header class="main-header">
       <nav>
         <div class="logo">
@@ -25,9 +26,18 @@
             alt="Consulting & Mentoring"
           />
         </div>
-        <div id="navigation">
+        <!-- <div id="navigation"> -->
+        <div class="navbar-nav-mobile">
           <i class="fa fa-bars fa-2x"></i>
         </div>
+        <div class="navbar-nav">
+          <a href="#home" class="nav-link text-uppercase">Home</a>
+          <a href="#services" class="nav-link text-uppercase">Services</a>
+          <a href="#jobs" class="nav-link text-uppercase">Jobs</a>
+          <a href="#projects" class="nav-link text-uppercase">Projects</a>
+          <a href="#reviews" class="nav-link text-uppercase">Reviews</a>
+        </div>
+        <!-- </div> -->
       </nav>
     </header>
     <section id="home" class="home">
@@ -38,15 +48,22 @@
           alt="Me, Carlos Loureda possing with a suit, professional photo"
         />
       </div>
-      <h1 class="text-white pl-15 pr-15">
-        Hi, I’m <span class="text-uppercase highlight">Carlos Loureda</span>
-        <span class="second-line">FrontEnd Engineer, Consultant & Mentor</span>
-      </h1>
-      <p class="text-white banner-paragraph pl-15 pr-15 ">
-        For 10 years I have been working with Software Development, and in close
-        contact with companies needs, helping building startups and helping them
-        grow
-      </p>
+      <div class="description">
+        <h1 class="text-white pl-15 pr-15">
+          Hi, I’m
+          <span class="text-uppercase highlight first-line"
+            >Carlos Loureda</span
+          >
+          <span class="second-line"
+            >FrontEnd Engineer, Consultant & Mentor</span
+          >
+        </h1>
+        <p class="text-white banner-paragraph pl-15 pr-15 ">
+          For 10 years I have been working with Software Development, and in
+          close contact with companies needs, helping building startups and
+          helping them grow
+        </p>
+      </div>
     </section>
     <section id="services" class="services">
       <h1>Have a look at my top Services</h1>
@@ -179,6 +196,7 @@
             Maintenance and improvement of systems implemented in Cobol and
             migration of some to web technologies with Java.
           </p>
+          <div class="btm-border"></div>
         </article>
       </div>
     </section>
@@ -187,65 +205,73 @@
         <h1>Latest Done Projects</h1>
         <p>Bellow litte samples of my work</p>
       </header>
-      <article class="projects-item">
+      <article class="projects-item reverse">
         <img
-          class="img-fluid"
+          class="img-fluid img-shrinkable"
           src="./images/connect.png"
           alt="Landing page of connect showing a hand holding a smartphone running the connet application and some copy text and call to action buttons"
         />
-        <h2 class="text-uppercase pt-30 pb-30">connect</h2>
-        <p class="description">
-          At my previous startup (Domesting SL) as co-founder I had to transform
-          the previous solution for domestic cleaning services into a solution
-          for the cleaning companies. With connect we didn't focus only only on
-          freelancer cleaners, we added a solution for all kind of cleaning
-          companies and facilities.
-        </p>
+        <div class="project-content">
+          <h2 class="text-uppercase pt-30 pb-30">connect</h2>
+          <p class="description">
+            At my previous startup (Domesting SL) as co-founder I had to
+            transform the previous solution for domestic cleaning services into
+            a solution for the cleaning companies. With connect we didn't focus
+            only only on freelancer cleaners, we added a solution for all kind
+            of cleaning companies and facilities.
+          </p>
+        </div>
       </article>
       <article class="projects-item">
         <img
-          class="img-fluid"
+          class="img-fluid  img-shrinkable"
           src="./images/facilities.png"
           alt="dashboard of the facilities platform showing a cleaning review from the reviewer role accesss"
         />
-        <h2 class="text-uppercase pt-30 pb-30">Domesting Facilities</h2>
-        <p class="description">
-          An adjustment in the connect page where we have been able to help
-          large companies or facilities to manage the revision of the cleaning
-          of their establishments.
-        </p>
+        <div class="project-content">
+          <h2 class="text-uppercase pt-30 pb-30">Domesting Facilities</h2>
+          <p class="description">
+            An adjustment in the connect page where we have been able to help
+            large companies or facilities to manage the revision of the cleaning
+            of their establishments.
+          </p>
+        </div>
       </article>
-      <article class="projects-item">
+      <article class="projects-item  reverse">
         <img
-          class="img-fluid"
+          class="img-fluid  img-shrinkable"
           src="./images/hospitality.png"
           alt="First page of a comercial presentation of Hospitality v1.0 product, showing the reviewer role view for seeing the rooms to clean today"
         />
-        <h2 class="text-uppercase  pt-30 pb-30">Hospitality</h2>
-        <p class="description">
-          The crown jewel. The definitive solution for the management of
-          housekeeping and maintenance of hotels, as well as its communication
-          with frontdesk. In this project I was the CTO and helped in the
-          product design to be able to assemble a total solution for hotels,
-          both web and mobile. I managed an international team of 10 people and
-          was a fundamental part in the development and implementation of the
-          mobile application.
-        </p>
+        <div class="project-content">
+          <h2 class="text-uppercase  pt-30 pb-30">Hospitality</h2>
+          <p class="description">
+            The crown jewel. The definitive solution for the management of
+            housekeeping and maintenance of hotels, as well as its communication
+            with frontdesk. In this project I was the CTO and helped in the
+            product design to be able to assemble a total solution for hotels,
+            both web and mobile. I managed an international team of 10 people
+            and was a fundamental part in the development and implementation of
+            the mobile application.
+          </p>
+        </div>
       </article>
       <article class="projects-item">
         <img
-          class="img-fluid"
+          class="img-fluid  img-shrinkable"
           src="./images/domesting_project.png"
           alt="Ladning page of Domesting showing a cleaned saloon image with a grey couch and 2 buttons for hiring a cleaning or signing up as a cleaner"
         />
-        <h2 class="text-uppercase  pt-30 pb-30">Domesting</h2>
-        <p class="description">
-          Domesting.com was the first website I built on the startup I
-          co-founded. At that time I was the unique developer in the first
-          stages of the company. I built a complete website to provide final
-          users and domestic cleaner a tool for them to manage the domesting
-          cleaning services.
-        </p>
+        <div class="project-content">
+          <h2 class="text-uppercase  pt-30 pb-30">Domesting</h2>
+          <p class="description">
+            Domesting.com was the first website I built on the startup I
+            co-founded. At that time I was the unique developer in the first
+            stages of the company. I built a complete website to provide final
+            users and domestic cleaner a tool for them to manage the domesting
+            cleaning services.
+          </p>
+        </div>
       </article>
     </section>
     <section id="reviews" class="reviews">
