@@ -16,6 +16,7 @@
     />
   </head>
   <body>
+    <!-- TODO: Make it work for showing dropdown on small devices and collapse on too many items -->
     <header class="main-header">
       <nav>
         <div class="logo">
@@ -25,9 +26,18 @@
             alt="Consulting & Mentoring"
           />
         </div>
-        <div id="navigation">
+        <!-- <div id="navigation"> -->
+        <div class="navbar-nav-mobile">
           <i class="fa fa-bars fa-2x"></i>
         </div>
+        <div class="navbar-nav">
+          <a href="#home" class="nav-link text-uppercase">Home</a>
+          <a href="#services" class="nav-link text-uppercase">Services</a>
+          <a href="#jobs" class="nav-link text-uppercase">Jobs</a>
+          <a href="#projects" class="nav-link text-uppercase">Projects</a>
+          <a href="#reviews" class="nav-link text-uppercase">Reviews</a>
+        </div>
+        <!-- </div> -->
       </nav>
     </header>
     <section id="home" class="home">
@@ -195,7 +205,7 @@
         <h1>Latest Done Projects</h1>
         <p>Bellow litte samples of my work</p>
       </header>
-      <article class="projects-item">
+      <article class="projects-item reverse">
         <img
           class="img-fluid"
           src="./images/connect.png"
@@ -213,6 +223,11 @@
         </div>
       </article>
       <article class="projects-item">
+        <img
+          class="img-fluid"
+          src="./images/facilities.png"
+          alt="dashboard of the facilities platform showing a cleaning review from the reviewer role accesss"
+        />
         <div class="project-content">
           <h2 class="text-uppercase pt-30 pb-30">Domesting Facilities</h2>
           <p class="description">
@@ -221,13 +236,8 @@
             of their establishments.
           </p>
         </div>
-        <img
-          class="img-fluid"
-          src="./images/facilities.png"
-          alt="dashboard of the facilities platform showing a cleaning review from the reviewer role accesss"
-        />
       </article>
-      <article class="projects-item">
+      <article class="projects-item  reverse">
         <img
           class="img-fluid"
           src="./images/hospitality.png"
@@ -247,6 +257,11 @@
         </div>
       </article>
       <article class="projects-item">
+        <img
+          class="img-fluid"
+          src="./images/domesting_project.png"
+          alt="Ladning page of Domesting showing a cleaned saloon image with a grey couch and 2 buttons for hiring a cleaning or signing up as a cleaner"
+        />
         <div class="project-content">
           <h2 class="text-uppercase  pt-30 pb-30">Domesting</h2>
           <p class="description">
@@ -257,11 +272,6 @@
             cleaning services.
           </p>
         </div>
-        <img
-          class="img-fluid"
-          src="./images/domesting_project.png"
-          alt="Ladning page of Domesting showing a cleaned saloon image with a grey couch and 2 buttons for hiring a cleaning or signing up as a cleaner"
-        />
       </article>
     </section>
     <section id="reviews" class="reviews">
