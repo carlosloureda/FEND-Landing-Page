@@ -226,6 +226,29 @@ h6 {
     margin-top: 0px;
     font-size: 0.88em;
   }
+  /* Footer */
+  footer {
+    background-color: #222222;
+    color: #777777;
+  }
+  footer .container {
+    padding-top: 100px;
+  }
+  footer .footer-text {
+    margin-bottom: 16px;
+    font-size: 0.88em;
+  }
+  footer .footer-text span,
+  i {
+    color: #8490ff;
+  }
+  footer a {
+    text-decoration: none;
+    color: #8490ff;
+  }
+  footer h2 {
+    color: white;
+  }
 }
 
 .text-uppercase {
@@ -276,8 +299,17 @@ h1 .highlight {
 .pr-30 {
   padding-right: 30px;
 }
+.pt-15 {
+  padding-top: 15px;
+}
 .pb-15 {
   padding-bottom: 15px;
+}
+.pr-15 {
+  padding-right: 15px;
+}
+.pl-15 {
+  padding-left: 15px;
 }
 .ml-15 {
   margin-left: 15px;
@@ -285,6 +317,23 @@ h1 .highlight {
 .mr-15 {
   margin-right: 15px;
 }
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+
+/* Icons */
+.fa-twitter {
+  color: #007bff;
+}
+.fa-linkedin {
+  background-color: #007bff;
+  color: black;
+  padding: 1px;
+}
+
 /*******************************************************************************
 ********************************************************************************
                     Others
