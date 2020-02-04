@@ -380,9 +380,61 @@
           </a>
         </div>
       </div>
+      <button id="scroll-top-btn" class="scroll-top-btn">
+        <i class="fa fa-arrow-up"></i>
+      </button>
     </footer>
     <script>
-      //   console.log(months);
+      // TODO: Move this to app.js file
+      /**
+        Holds all the logic for the button to scroll up
+      */
+      const scrollToTopHanlder = targetId => {
+        let intervalId = null;
+
+        /* This does the scroll */
+        scrollToTop = () => {
+          const scrollStepInPx = "100";
+          if (window.pageYOffset === 0) {
+            clearInterval(intervalId);
+          }
+
+          window.scroll(0, window.pageYOffset - scrollStepInPx);
+        };
+
+        /* This sets the interval after which we do the scroll calling
+        `scrollToTop` function */
+        scrollToTopEvent = () => {
+          const delayInMs = "10.0";
+          intervalId = setInterval(scrollToTop, delayInMs);
+        };
+
+        /* Attach the `scrollToTopEvent` event to the NodeElement in charge of
+        managing this event by users input */
+        document
+          .getElementById(targetId)
+          .addEventListener("click", scrollToTopEvent);
+
+        /* We want to hide the scroll to top button when there is not enough scroll */
+        window.onscroll = () => {
+          const vh = Math.max(
+            document.documentElement.clientHeight,
+            window.innerHeight || 0
+          );
+          var scrollTop =
+            document.documentElement.scrollTop || document.body.scrollTop;
+
+          if (scrollTop >= vh) {
+            document.getElementById("scroll-top-btn").style.opacity = "0.3";
+            document.getElementById("scroll-top-btn").style.visibility =
+              "visible";
+          } else {
+            document.getElementById("scroll-top-btn").style.visibility =
+              "hidden";
+          }
+        };
+      };
+      scrollToTopHanlder("scroll-top-btn");
     </script>
   </body>
   <script src="app.js"></script>

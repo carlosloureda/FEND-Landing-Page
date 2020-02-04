@@ -251,6 +251,32 @@ h6 {
   }
 }
 
+/* Scroll to top button*/
+.scroll-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #8490ff;
+  border-color: #8490ff;
+  border-radius: 2px;
+  width: 38px;
+  height: 38px;
+  box-shadow: none;
+  opacity: 0.3;
+  visibility: hidden;
+}
+.scroll-top-btn:hover {
+  opacity: 0.8;
+}
+.scroll-top-btn:click {
+  opacity: 0.8;
+}
+
+.scroll-top-btn i {
+  color: white;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
