@@ -517,6 +517,13 @@ h1 .highlight {
   padding: 1px;
 }
 
+.img-shrinkable {
+  transition: transform 0.5s ease;
+}
+.img-shrinkable:hover {
+  transform: scale(0.8);
+}
+
 @media (min-width: 769px) {
   /* Main header */
   .main-header {
