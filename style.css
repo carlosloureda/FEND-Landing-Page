@@ -579,6 +579,30 @@ h1 .highlight {
     max-width: 330px;
   }
 
+  /* Projects Section */
+  .projects {
+    margin-right: 349px;
+    margin-left: 349px;
+  }
+  .projects .projects-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+  .projects .projects-item .img-fluid {
+    width: 50%;
+  }
+
+  .projects .projects-item .project-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 22.75px;
+  }
+  .projects .projects-item .description {
+    color: #777777;
+  }
+
   /* Reviews section */
   .reviews {
     margin-right: 349px;
