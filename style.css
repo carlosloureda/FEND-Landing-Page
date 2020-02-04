@@ -24,7 +24,7 @@ h6 {
 ****************************************************************************** */
 @media (max-width: 768px) {
   body {
-    background-color: orchid;
+    background-color: white;
     /* background-color: #97726e; */
     display: flex;
     flex-direction: column;
@@ -116,36 +116,11 @@ h6 {
     align-self: flex-end;
     padding-bottom: 1em;
   }
-}
-
-/*******************************************************************************
-********************************************************************************
-                    Design for 360px x 640 px (Portrait)
-********************************************************************************
-****************************************************************************** */
-
-@media (max-width: 375px) {
-  /* Home Section */
-  .home {
-    /* height: 100vh; */
-    min-height: 550px;
-  }
-  /* Services Section */
-
-  .services .services-content {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 25px;
-  }
-  .services .services-content .service {
-    display: flex;
-    flex-direction: column;
-  }
-
   /* Jobs Section */
   .jobs {
     background-color: white;
     padding-left: 0.5em;
+    padding-bottom: 80px;
     padding-right: 0.5em;
     padding-top: 120px;
     text-align: center;
@@ -156,40 +131,48 @@ h6 {
     padding-bottom: 20px;
     margin-bottom: 0px;
   }
-  .jobs-content {
-    padding-top: 30px;
-    padding-bottom: 30px;
+
+  .jobs-content .job-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  .jobs .jobs-content h2 {
+  .jobs .jobs-content .job-item h2 {
     margin-block-end: 0px;
+    font-size: 24px;
   }
-  .jobs .jobs-content .job-date {
+  .jobs .jobs-content .job-item .job-date {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
     font-weight: 300;
+    color: #777777;
   }
-  .jobs .jobs-content h3 {
+  .jobs .jobs-content .job-item h3 {
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
     margin-bottom: 0px;
+    font-size: 18px;
   }
-  .jobs .jobs-content p.description {
+  .jobs .jobs-content .job-item p.description {
     font-size: 14px;
-    font-weight: 300;
+    line-height: 22.75px;
     margin-top: 0px;
     margin-bottom: 0px;
+    color: #777777;
   }
 
   /* Projects Section */
   .projects {
     background-color: #f9f9ff;
     padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 120px;
-    /* text-align: center; */
+    /* padding-right: 0.5em;
+    padding-top: 120px; */
+    /* margin-left: 24px;
+    margin-right: 24px; */
+    padding-left: 39px;
+    padding-right: 39px;
   }
 
   .projects .menu-content {
@@ -218,13 +201,49 @@ h6 {
   .projects-item h2 {
     text-transform: capitalize;
     margin-bottom: 0px;
-    font-size: 1.13em;
+    /* font-size: 1.13em; */
+    font-size: 18px;
   }
   .projects .description {
     margin-top: 0px;
     padding-bottom: 100px;
-    font-size: 0.88em;
+    /* font-size: 0.88em; */
+    font-size: 14px;
+    line-height: 22.75px;
+    color: #777777;
   }
+}
+
+/*******************************************************************************
+********************************************************************************
+                    Design for 360px x 640 px (Portrait)
+********************************************************************************
+****************************************************************************** */
+
+@media (max-width: 375px) {
+  /* Home Section */
+  .home {
+    /* height: 100vh; */
+    min-height: 550px;
+  }
+  /* Services Section */
+
+  .services .services-content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+  .services .services-content .service {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Jobs Section */
+  /* Inherit */
+
+  /* Projects Section */
+  /* Inherit */
+
   /* Reviews */
   .reviews {
     background-color: white;
@@ -302,16 +321,34 @@ h6 {
   body {
     font-size: 22.5px;
   }
+
+  /* Home Section */
   .home {
     padding-bottom: 30px;
   }
 
+  /* Services Section */
   .services .services-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+  }
+
+  /* Jobs Section */
+
+  .jobs-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+  }
+  .jobs-content .job-item {
+    max-width: 330px;
   }
 }
 
@@ -364,6 +401,8 @@ h1 .highlight {
   height: 1px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 .img-fluid {
   width: 100%;
