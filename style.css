@@ -98,6 +98,57 @@ h6 {
   color: #777777;
 }
 
+/* Reviews */
+.reviews {
+  background-color: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 120px;
+}
+.reviews h1 {
+  /* font-size: 2.25em; */
+  font-size: 36px;
+  line-height: 43.2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 70px;
+}
+
+/* TODO: Show less or more button (on React I made this: https://github.com/carlosloureda/personal-brand-site/blob/master/src/components/Review/Review.js) */
+.reviews-item {
+  background-color: #f9f9ff;
+  margin-bottom: 30px;
+}
+.reviews-item:hover {
+  background-image: linear-gradient(
+    0deg,
+    rgb(98, 189, 252) 0%,
+    rgb(132, 144, 255) 100%
+  );
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.reviews-item h2 {
+  text-transform: capitalize;
+  margin-bottom: 0px;
+  /* font-size: 1.13em; */
+  font-size: 20px;
+  line-height: 22.75px;
+  padding-bottom: 20px;
+}
+.reviews-item h2 > a {
+  text-decoration: none;
+  color: inherit;
+}
+.reviews-item .review {
+  margin-top: 0px;
+  font-size: 0.88em;
+  line-height: 22.75px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #777777;
+}
+
 /* Footer section */
 footer {
   background-color: #222222;
@@ -191,50 +242,6 @@ footer h2 {
     font-size: 1.2em;
   }
 
-  /* Jobs Section */
-  /* .jobs {
-    background-color: white;
-    padding-left: 0.5em;
-    padding-bottom: 80px;
-    padding-right: 0.5em;
-    padding-top: 120px;
-    text-align: center;
-  }
-  .jobs > h1 {
-    font-size: 2.25em;
-    font-weight: 600;
-    padding-bottom: 20px;
-    margin-bottom: 0px;
-  }
-
-  .jobs-content .job-item {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .jobs .jobs-content .job-item h2 {
-    font-size: 24px;
-  }
-  .jobs .jobs-content .job-item .job-date {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 14px;
-    font-weight: 300;
-    color: #777777;
-  }
-  .jobs .jobs-content .job-item h3 {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 0px;
-    font-size: 18px;
-  }
-  .jobs .jobs-content .job-item p.description {
-    font-size: 14px;
-    line-height: 22.75px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: #777777;
-  } */
-
   /* Projects Section */
   .projects {
     background-color: #f9f9ff;
@@ -282,57 +289,6 @@ footer h2 {
     /* font-size: 0.88em; */
     font-size: 14px;
     line-height: 22.75px;
-    color: #777777;
-  }
-
-  /* Reviews */
-  .reviews {
-    background-color: white;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 120px;
-  }
-  .reviews h1 {
-    /* font-size: 2.25em; */
-    font-size: 36px;
-    line-height: 43.2px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    padding-bottom: 70px;
-  }
-
-  /* TODO: Show less or more button (on React I made this: https://github.com/carlosloureda/personal-brand-site/blob/master/src/components/Review/Review.js) */
-  .reviews-item {
-    background-color: #f9f9ff;
-    margin-bottom: 30px;
-  }
-  .reviews-item:hover {
-    background-image: linear-gradient(
-      0deg,
-      rgb(98, 189, 252) 0%,
-      rgb(132, 144, 255) 100%
-    );
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-  }
-  .reviews-item h2 {
-    text-transform: capitalize;
-    margin-bottom: 0px;
-    /* font-size: 1.13em; */
-    font-size: 20px;
-    line-height: 22.75px;
-    padding-bottom: 20px;
-  }
-  .reviews-item h2 > a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .reviews-item .review {
-    margin-top: 0px;
-    font-size: 0.88em;
-    line-height: 22.75px;
-    font-size: 14px;
-    font-weight: 300;
     color: #777777;
   }
 }
@@ -554,30 +510,6 @@ h1 .highlight {
   padding: 1px;
 }
 
-/*******************************************************************************
-********************************************************************************
-                    Others
-********************************************************************************
-****************************************************************************** */
-
-/* @media (min-width: 361px) and (max-width: 375px)  {
-  body {
-    background-color: blue;
-  }
-} */
-
-/* @media (min-width: 769px) and (max-width: 1366px) {
-  body {
-    background-color: green;
-  }
-}
-
-@media (min-width: 1367px) {
-  body {
-    background-color: yellow;
-  }
-} */
-
 @media (min-width: 769px) {
   /* Services Section */
   .services {
@@ -606,6 +538,20 @@ h1 .highlight {
   }
   .jobs-content .job-item {
     max-width: 330px;
+  }
+
+  /* Reviews section */
+  .reviews {
+    margin-right: 349px;
+    margin-left: 349px;
+  }
+  .reviews .reviews-content {
+    display: grid;
+    /* TODO: make columns dynamic to have more columns */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
 
   /* Footer */
