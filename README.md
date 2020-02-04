@@ -8,6 +8,7 @@ We are viewing some basic content for the nanodegree. We will keep things easy a
 - [Installation](#installation)
 - [About](#about)
 - [Data](#data)
+- [Brances](#branches)
 - [Support](#support)
 - [Contributing](#contributing)
 
@@ -79,6 +80,14 @@ Each of these sections has a `title` and a `sections` property. Inside each sect
     }
 
 ```
+
+## Branches
+
+- `master` -> Main branch with all the final code
+- `basic-design` -> Static design with just design for mobile (width <=375px)
+- `design-for-tablets` -> (everything on `basic-design`) Static design with the design for tablets (width > 375px && <=768px)
+- `design-for-desktop` -> (everything on `basic-design` && `design-for-tablets`) Static design with the design for large devices/desktop (width > 769px)
+- `generate-sections-dynamic` -> An experimental branch to add HTML/CSS from Javascript.
 
 ## Support
 
