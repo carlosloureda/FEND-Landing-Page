@@ -223,11 +223,44 @@ footer h2 {
     justify-content: space-between;
     align-items: center;
   }
-  .main-header .navbar-nav {
+  .main-header nav .logo .logo-image {
+    width: 80%;
+  }
+  .main-header .navbar-nav a {
     display: none;
   }
-  .main-header .navbar-nav-mobile {
+  /* .main-header .navbar-nav-mobile {
     display: inline-block;
+  } */
+
+  /* REsponisve */
+  .main-header .navbar-nav.responsive {
+    /* display: inline-block; */
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    /* background: rgb(98, 189, 252, 0.9); */
+    background: rgb(98, 189, 252);
+    position: absolute;
+    top: 95px;
+    left: 0px;
+    width: 100%;
+    z-index: 980;
+    padding-top: 10px;
+  }
+  .main-header .navbar-nav.responsive a {
+    text-decoration: none;
+    color: white;
+    /* margin-right: 30px; */
+    padding-bottom: 30px;
+    padding-left: 50px;
+    font-weight: 600;
+    display: flex;
+    margin: auto;
+  }
+  .main-header .navbar-nav.responsive a:hover {
+    color: black;
   }
   /* Home Section */
   .home {
@@ -552,9 +585,9 @@ h1 .highlight {
   .main-header .navbar-nav {
     display: inline-block;
   }
-  .main-header .navbar-nav-mobile {
+  /* .main-header .navbar-nav .navbar-nav-mobile {
     display: none;
-  }
+  } */
   .main-header .navbar-nav a {
     text-decoration: none;
     color: white;
@@ -563,6 +596,11 @@ h1 .highlight {
   }
   .main-header .navbar-nav a:hover {
     color: black;
+  }
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox#Alignment_and_auto_margins */
+  .navbar-nav-mobile {
+    /* margin-left: auto; */
+    display: none;
   }
 
   /* Home Sections */
