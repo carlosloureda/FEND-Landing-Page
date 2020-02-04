@@ -1,3 +1,4 @@
+/* TODO: test breakpoints */
 body {
   margin: 0;
   font-family: Poppins, sans-serif; /*TODO: work on the default font ...*/
@@ -168,8 +169,8 @@ h6 {
   .projects {
     background-color: #f9f9ff;
     padding-left: 0.5em;
-    /* padding-right: 0.5em;
-    padding-top: 120px; */
+    padding-top: 120px;
+    /* padding-right: 0.5em;*/
     /* margin-left: 24px;
     margin-right: 24px; */
     padding-left: 39px;
@@ -264,11 +265,35 @@ h6 {
     font-weight: 300;
     color: #777777;
   }
+
+  /* Footer section */
+  footer {
+    background-color: #222222;
+    color: #777777;
+  }
+  footer .container {
+    padding-top: 100px;
+  }
+  footer .footer-text {
+    margin-bottom: 16px;
+    font-size: 0.88em;
+  }
+  footer .footer-text span,
+  i {
+    color: #8490ff;
+  }
+  footer a {
+    text-decoration: none;
+    color: #8490ff;
+  }
+  footer h2 {
+    color: white;
+  }
 }
 
 /*******************************************************************************
 ********************************************************************************
-                    Design for 360px x 640 px (Portrait)
+                    Design for 360px (Portrait)
 ********************************************************************************
 ****************************************************************************** */
 
@@ -300,27 +325,9 @@ h6 {
   /* Inherit */
 
   /* Footer */
-  footer {
-    background-color: #222222;
-    color: #777777;
-  }
-  footer .container {
-    padding-top: 100px;
-  }
-  footer .footer-text {
-    margin-bottom: 16px;
-    font-size: 0.88em;
-  }
-  footer .footer-text span,
-  i {
-    color: #8490ff;
-  }
-  footer a {
-    text-decoration: none;
-    color: #8490ff;
-  }
-  footer h2 {
-    color: white;
+  footer .container .right-footer {
+    padding-top: 30px;
+    margin-bottom: 15px;
   }
 }
 
@@ -373,6 +380,22 @@ h6 {
     grid-auto-rows: minmax(min-content, max-content);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+  }
+
+  /* Footer */
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .container .left-footer {
+    /* width: 50%; */
+    flex: 0.5;
+  }
+  footer .container .right-footer {
+    /* width: 50%; */
+    flex: 0.5;
+    align-self: center;
   }
 }
 
