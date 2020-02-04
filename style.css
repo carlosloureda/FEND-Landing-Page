@@ -116,6 +116,7 @@ h6 {
     align-self: flex-end;
     padding-bottom: 1em;
   }
+
   /* Jobs Section */
   .jobs {
     background-color: white;
@@ -212,6 +213,57 @@ h6 {
     line-height: 22.75px;
     color: #777777;
   }
+
+  /* Reviews */
+  .reviews {
+    background-color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 120px;
+  }
+  .reviews h1 {
+    /* font-size: 2.25em; */
+    font-size: 36px;
+    line-height: 43.2px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-bottom: 70px;
+  }
+
+  /* TODO: Show less or more button (on React I made this: https://github.com/carlosloureda/personal-brand-site/blob/master/src/components/Review/Review.js) */
+  .reviews-item {
+    background-color: #f9f9ff;
+    margin-bottom: 30px;
+  }
+  .reviews-item:hover {
+    background-image: linear-gradient(
+      0deg,
+      rgb(98, 189, 252) 0%,
+      rgb(132, 144, 255) 100%
+    );
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  .reviews-item h2 {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    /* font-size: 1.13em; */
+    font-size: 20px;
+    line-height: 22.75px;
+    padding-bottom: 20px;
+  }
+  .reviews-item h2 > a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .reviews-item .review {
+    margin-top: 0px;
+    font-size: 0.88em;
+    line-height: 22.75px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #777777;
+  }
 }
 
 /*******************************************************************************
@@ -245,46 +297,8 @@ h6 {
   /* Inherit */
 
   /* Reviews */
-  .reviews {
-    background-color: white;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 120px;
-  }
-  .reviews h1 {
-    font-size: 2.25em;
-    font-weight: 600;
-    margin-bottom: 10px;
-    padding-bottom: 70px;
-  }
-  /* TODO: Show less or more button (on React I made this: https://github.com/carlosloureda/personal-brand-site/blob/master/src/components/Review/Review.js) */
-  .reviews-item {
-    background-color: #f9f9ff;
-    margin-bottom: 30px;
-  }
-  .reviews-item:hover {
-    background-image: linear-gradient(
-      0deg,
-      rgb(98, 189, 252) 0%,
-      rgb(132, 144, 255) 100%
-    );
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-  }
-  .reviews-item h2 {
-    text-transform: capitalize;
-    margin-bottom: 0px;
-    font-size: 1.13em;
-    padding-bottom: 20px;
-  }
-  .reviews-item h2 > a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .reviews-item .review {
-    margin-top: 0px;
-    font-size: 0.88em;
-  }
+  /* Inherit */
+
   /* Footer */
   footer {
     background-color: #222222;
@@ -349,6 +363,16 @@ h6 {
   }
   .jobs-content .job-item {
     max-width: 330px;
+  }
+
+  /* Reviews section */
+  .reviews .reviews-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(2, 1fr); */
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
   }
 }
 
