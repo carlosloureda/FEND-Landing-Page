@@ -18,6 +18,111 @@ h6 {
   line-height: 1.2em;
 }
 
+/* Services Section */
+.services {
+  background-color: #f9f9ff;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.services > h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 70px;
+  margin-bottom: 10px;
+}
+.services .services-content .service {
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 22.75px;
+}
+.services .services-content .service h2 {
+  font-size: 24px;
+}
+.services .services-content .service p {
+  font-size: 18px;
+  color: #777777;
+}
+.services-picture {
+  align-self: flex-end;
+  padding-bottom: 1em;
+}
+
+/* Jobs Section */
+/* Jobs Section */
+.jobs {
+  background-color: white;
+  padding-left: 0.5em;
+  padding-bottom: 80px;
+  padding-right: 0.5em;
+  padding-top: 120px;
+  text-align: center;
+}
+.jobs > h1 {
+  font-size: 2.25em;
+  font-weight: 600;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+.jobs-content .job-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.jobs .jobs-content .job-item h2 {
+  /* margin-block-end: 0px; */
+  font-size: 24px;
+}
+.jobs .jobs-content .job-item .job-date {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #777777;
+}
+.jobs .jobs-content .job-item h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+.jobs .jobs-content .job-item p.description {
+  font-size: 14px;
+  line-height: 22.75px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #777777;
+}
+
+/* Footer section */
+footer {
+  background-color: #222222;
+  color: #777777;
+}
+footer .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+footer .footer-text {
+  margin-bottom: 16px;
+  font-size: 0.88em;
+}
+footer .footer-text span,
+i {
+  color: #8490ff;
+}
+footer a {
+  text-decoration: none;
+  color: #8490ff;
+}
+footer h2 {
+  color: white;
+}
+
 /*******************************************************************************
 ********************************************************************************
                 Common design for tablets && mobile (360px && 768px)
@@ -86,40 +191,8 @@ h6 {
     font-size: 1.2em;
   }
 
-  /* Services Section */
-  .services {
-    background-color: #f9f9ff;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-  .services > h1 {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 600;
-    padding-bottom: 70px;
-    margin-bottom: 10px;
-  }
-  .services .services-content .service {
-    padding-left: 10px;
-    padding-right: 10px;
-    line-height: 22.75px;
-  }
-  .services .services-content .service h2 {
-    font-size: 24px;
-  }
-  .services .services-content .service p {
-    font-size: 18px;
-    color: #777777;
-  }
-  .services-picture {
-    align-self: flex-end;
-    padding-bottom: 1em;
-  }
-
   /* Jobs Section */
-  .jobs {
+  /* .jobs {
     background-color: white;
     padding-left: 0.5em;
     padding-bottom: 80px;
@@ -139,7 +212,6 @@ h6 {
     padding-bottom: 10px;
   }
   .jobs .jobs-content .job-item h2 {
-    /* margin-block-end: 0px; */
     font-size: 24px;
   }
   .jobs .jobs-content .job-item .job-date {
@@ -152,8 +224,6 @@ h6 {
   .jobs .jobs-content .job-item h3 {
     padding-top: 20px;
     padding-bottom: 20px;
-    /* padding-left: 10px;
-    padding-right: 10px; */
     margin-bottom: 0px;
     font-size: 18px;
   }
@@ -163,7 +233,7 @@ h6 {
     margin-top: 0px;
     margin-bottom: 0px;
     color: #777777;
-  }
+  } */
 
   /* Projects Section */
   .projects {
@@ -264,30 +334,6 @@ h6 {
     font-size: 14px;
     font-weight: 300;
     color: #777777;
-  }
-
-  /* Footer section */
-  footer {
-    background-color: #222222;
-    color: #777777;
-  }
-  footer .container {
-    padding-top: 100px;
-  }
-  footer .footer-text {
-    margin-bottom: 16px;
-    font-size: 0.88em;
-  }
-  footer .footer-text span,
-  i {
-    color: #8490ff;
-  }
-  footer a {
-    text-decoration: none;
-    color: #8490ff;
-  }
-  footer h2 {
-    color: white;
   }
 }
 
@@ -531,3 +577,50 @@ h1 .highlight {
     background-color: yellow;
   }
 } */
+
+@media (min-width: 769px) {
+  /* Services Section */
+  .services {
+    margin-right: 349px;
+    margin-left: 349px;
+  }
+  .services .services-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+  /* Jobs Section */
+
+  .jobs-content {
+    margin-right: 349px;
+    margin-left: 349px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+  }
+  .jobs-content .job-item {
+    max-width: 330px;
+  }
+
+  /* Footer */
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer .container .left-footer {
+    /* width: 50%; */
+    flex: 0.5;
+  }
+  footer .container .right-footer {
+    /* width: 50%; */
+    flex: 0.5;
+    align-self: center;
+  }
+}
