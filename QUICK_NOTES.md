@@ -44,3 +44,7 @@ http://paletton.com/#uid=5050-0kfB8H8MiY9mbskY7cqS4Y
 # Icons
 
 I am going to use FontAwesome Icons over a CDN ...
+
+# Resources
+
+https://justmarkup.com/articles/2017-01-12-truncating-and-revealing-text-the-show-more-and-read-more-patterns/
