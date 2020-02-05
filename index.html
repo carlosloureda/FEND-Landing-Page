@@ -21,21 +21,25 @@
       <nav>
         <div class="logo">
           <img
-            class="logo-image"
+            class="logo-image img-fluid"
             src="./images/logo.png"
             alt="Consulting & Mentoring"
           />
         </div>
         <!-- <div id="navigation"> -->
-        <div class="navbar-nav-mobile">
-          <i class="fa fa-bars fa-2x"></i>
-        </div>
+
         <div class="navbar-nav">
           <a href="#home" class="nav-link text-uppercase">Home</a>
           <a href="#services" class="nav-link text-uppercase">Services</a>
           <a href="#jobs" class="nav-link text-uppercase">Jobs</a>
           <a href="#projects" class="nav-link text-uppercase">Projects</a>
           <a href="#reviews" class="nav-link text-uppercase">Reviews</a>
+          <!-- <a href="" class="navbar-nav-mobile">
+                      <i class="fa fa-bars fa-2x"></i>
+                    </a> -->
+        </div>
+        <div class="navbar-nav-mobile" id="open-menu">
+          <i class="fa fa-bars fa-2x"></i>
         </div>
         <!-- </div> -->
       </nav>
@@ -478,6 +482,16 @@
         };
       };
       scrollToTopHanlder("scroll-top-btn");
+    </script>
+    <script>
+      document.getElementById("open-menu").addEventListener("click", () => {
+        const navBar = document.getElementsByClassName("navbar-nav")[0];
+        if (navBar.className === "navbar-nav") {
+          navBar.className += " responsive";
+        } else {
+          navBar.className = "navbar-nav";
+        }
+      });
     </script>
     <script src="app.js"></script>
   </body>
