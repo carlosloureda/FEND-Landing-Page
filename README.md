@@ -88,6 +88,7 @@ Each of these sections has a `title` and a `sections` property. Inside each sect
 - `design-for-tablets` -> (everything on `basic-design`) Static design with the design for tablets (width > 375px && <=768px)
 - `design-for-desktop` -> (everything on `basic-design` && `design-for-tablets`) Static design with the design for large devices/desktop (width > 769px)
 - `generate-sections-dynamic` -> An experimental branch to add HTML/CSS from Javascript.
+- `adding-dynamic-content` --> Adding everything from App.js
 
 ## Support
 

@@ -201,7 +201,7 @@ footer h2 {
   bottom: 10px;
   right: 10px;
   cursor: pointer;
-  background-color: #8490ff;
+  background-color: #8490fd;
   border-color: #8490ff;
   border-radius: 2px;
   width: 38px;
@@ -365,9 +365,7 @@ h1 .highlight {
 
   /* nav bar */
   .main-header .navbar-nav.responsive {
-    -webkit-flex-direction: column;
     flex-direction: column;
-    -webkit-justify-content: center;
     justify-content: center;
     /* background: rgb(98, 189, 252, 0.9); */
     background: rgb(98, 189, 252);
@@ -630,7 +628,7 @@ h1 .highlight {
       rgb(132, 144, 255) 100%
     );
     display: flex;
-    flex-direction: flow;
+    flex-direction: row;
     padding-right: 15%;
     padding-left: 15%;
     min-height: 750px;

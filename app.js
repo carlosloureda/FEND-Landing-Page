@@ -188,3 +188,84 @@ const sectionsData = {
 // image.src = "./images/cohete.png";
 
 // mainTag.appendChild(image);
+
+/* *****************************************************************************
+********************************************************************************
+********************************************************************************
+                        SCROLL TO TOP FUNCTIONALITY
+********************************************************************************
+********************************************************************************
+***************************************************************************** */
+
+/**
+ * Holds all the logic for the button to scroll up when we have scrolled down
+ * from the initial top view
+ * @param {string} targetId - The id of the elmenent in charge of doing the scrolling
+ * Its design is managed over CSS
+ */
+const scrollToTopHanlder = targetId => {
+  let intervalId = null;
+
+  /* This does the scroll */
+  scrollToTop = () => {
+    const scrollStepInPx = "100";
+    if (window.pageYOffset === 0) {
+      clearInterval(intervalId);
+    }
+
+    window.scroll(0, window.pageYOffset - scrollStepInPx);
+  };
+
+  /* This sets the interval after which we do the scroll calling
+  `scrollToTop` function */
+  scrollToTopEvent = () => {
+    const delayInMs = "10.0";
+    intervalId = setInterval(scrollToTop, delayInMs);
+  };
+
+  /* Attach the `scrollToTopEvent` event to the NodeElement in charge of
+  managing this event by users input */
+  document.getElementById(targetId).addEventListener("click", scrollToTopEvent);
+
+  /* We want to hide the scroll to top button when there is not enough scroll */
+  window.onscroll = () => {
+    const vh = Math.max(
+      document.documentElement.clientHeight,
+      window.innerHeight || 0
+    );
+    var scrollTop =
+      document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (scrollTop >= vh) {
+      document.getElementById("scroll-top-btn").style.opacity = "0.3";
+      document.getElementById("scroll-top-btn").style.visibility = "visible";
+    } else {
+      document.getElementById("scroll-top-btn").style.visibility = "hidden";
+    }
+  };
+};
+scrollToTopHanlder("scroll-top-btn");
+
+/* *****************************************************************************
+********************************************************************************
+********************************************************************************
+                        RESPONSIVE NAVBAR FUNCTIONALITY
+********************************************************************************
+********************************************************************************
+***************************************************************************** */
+
+/**
+ * Event handler for showing small/medium devices navbar (navbar-nav responsive) or large
+ * devices (navbar-nav)
+ */
+const manageNavbarResponsiveness = () => {
+  const navBar = document.querySelector(".navbar-nav");
+  if (navBar.className === "navbar-nav") {
+    navBar.classList.add("responsive");
+  } else {
+    navBar.classList.remove("responsive");
+  }
+};
+document
+  .getElementById("open-menu")
+  .addEventListener("click", manageNavbarResponsiveness);

@@ -44,3 +44,14 @@ http://paletton.com/#uid=5050-0kfB8H8MiY9mbskY7cqS4Y
 # Icons
 
 I am going to use FontAwesome Icons over a CDN ...
+
+Icons made by [Freepik](https://www.flaticon.com/authors/freepik), [Eucalyp](https://www.flaticon.com/authors/eucalyp), [Flat Icons](https://www.flaticon.com/authors/flat-icons)
+
+# Resources
+
+My big thanks for everyone who made free content I could study to improve my skills
+
+Greddy-Navigation: https://codepen.io/carlos-loureda/pen/mdJbxmr?editors=1111
+Responsive-nav-bar: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
+Dropdown-menu: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+Show-less/Show-more: https://justmarkup.com/articles/2017-01-12-truncating-and-revealing-text-the-show-more-and-read-more-patterns/
