@@ -258,14 +258,107 @@ scrollToTopHanlder("scroll-top-btn");
  * Event handler for showing small/medium devices navbar (navbar-nav responsive) or large
  * devices (navbar-nav)
  */
-const manageNavbarResponsiveness = () => {
-  const navBar = document.querySelector(".navbar-nav");
-  if (navBar.className === "navbar-nav") {
-    navBar.classList.add("responsive");
-  } else {
-    navBar.classList.remove("responsive");
+// const manageNavbarResponsiveness = () => {
+//   const navBar = document.querySelector(".navbar-nav");
+//   if (navBar.className === "navbar-nav") {
+//     navBar.classList.add("responsive");
+//   } else {
+//     navBar.classList.remove("responsive");
+//   }
+// };
+// document
+//   .getElementById("open-menu")
+//   .addEventListener("click", manageNavbarResponsiveness);
+const getNumberOfLi = ulElement => {
+  var liNodes = [];
+
+  for (var i = 0; i < ulElement.childNodes.length; i++) {
+    if (ulElement.childNodes[i].nodeName == "LI") {
+      liNodes.push(ulElement.childNodes[i]);
+    }
   }
+  return liNodes.length;
 };
+
+var nav = document.querySelector(".greedy-nav");
+var btn = document.querySelector(".greedy-nav .menu-button");
+var vlinks = document.querySelector(".greedy-nav .visible-links");
+var hlinks = document.querySelector(".greedy-nav .hidden-links");
+// var nav = document.querySelector(".greedy-nav");
+// var btn = document.querySelector(".greedy-nav .menu-button");
+// var vlinks = document.querySelector(".greedy-nav .visible-links");
+// var hlinks = document.querySelector(".greedy-nav .hidden-links");
+var mobileNav = document.querySelector(".mobile-nav");
+
+var breaks = [];
+
+function updateNav() {
+  if (getComputedStyle(mobileNav, null).display !== "none") {
+    // console.log("not nav");
+    return;
+  }
+  console.log("updating");
+  var availableSpace = btn.classList.contains("hidden")
+    ? nav.offsetWidth
+    : nav.offsetWidth - btn.offsetWidth - 30;
+
+  // The visible list is overflowing the nav
+  if (vlinks.offsetWidth > availableSpace) {
+    // Record the width of the list
+    breaks.push(vlinks.offsetWidth);
+
+    // Move item to the hidden list
+    hlinks.prepend(vlinks.lastChild);
+
+    // Show the dropdown btn
+    if (btn.classList.contains("hidden")) {
+      btn.classList.remove("hidden");
+    }
+
+    // The visible list is not overflowing
+  } else {
+    // There is space for another item in the nav
+    if (availableSpace > breaks[breaks.length - 1]) {
+      // Move the item to the visible list
+      vlinks.appendChild(hlinks.firstChild);
+      breaks.pop();
+    }
+
+    // Hide the dropdown btn if hidden list is empty
+    // if (breaks.length < 2) {
+    if (!getNumberOfLi(hlinks)) {
+      btn.classList.add("hidden");
+      hlinks.classList.add("hidden");
+    }
+  }
+
+  // Keep counter updated
+  btn.setAttribute("count", Math.round(breaks.length / 2));
+  // Recur if the visible list is still overflowing the nav
+  if (vlinks.offsetWidth > availableSpace) {
+    updateNav();
+  }
+  // console.log("getNumberOfLi: ", getNumberOfLi(hlinks));
+}
+
+// Window listeners
+window.addEventListener("resize", () => updateNav());
+btn.addEventListener("click", e => {
+  e.stopPropagation();
+  hlinks.classList.toggle("hidden");
+});
+
+updateNav();
+
 document
-  .getElementById("open-menu")
-  .addEventListener("click", manageNavbarResponsiveness);
+  .querySelector(".mobile-nav .menu-button")
+  .addEventListener("click", () => {
+    console.log("clicking on  mobile menu");
+    document.querySelector(".mobile-nav .menu").classList.toggle("hidden");
+  });
+
+document.getElementsByTagName("body")[0].addEventListener("click", () => {
+  document.querySelector(".greedy-nav .hidden-links").classList.add("hidden");
+});
+
+console.log("HI!");
