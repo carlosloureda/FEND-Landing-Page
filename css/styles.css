@@ -357,6 +357,16 @@ h1 .highlight {
   width: 80%;
 }
 
+/* For active section while browsing */
+.home.active,
+.services.active,
+.jobs.active,
+.projects.active,
+.reviews.active {
+  /* background-color: #62bdfc; */
+  background-color: #c7e1fc;
+}
+
 /*******************************************************************************
 ********************************************************************************
                 Common design for tablets && mobile (360px && 768px)
@@ -844,8 +854,8 @@ h1 .highlight {
 
   /* Reviews section */
   .reviews {
-    margin-right: 15%;
-    margin-left: 15%;
+    padding-right: 15%;
+    padding-left: 15%;
   }
   .reviews .reviews-content {
     display: grid;

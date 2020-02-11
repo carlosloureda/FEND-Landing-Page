@@ -640,3 +640,32 @@ document.getElementsByTagName("body")[0].addEventListener("click", () => {
 });
 
 console.log("HI!");
+
+const observaleSections = Object.values(sectionsData)
+  // .concat({ id: "home" })
+  .map(section => {
+    console.log("section: ", section);
+    return document.getElementById(section.id);
+  });
+
+var observer = new IntersectionObserver(
+  function(entries) {
+    // isIntersecting is true when element and viewport are overlapping
+    // isIntersecting is false when element and viewport don't overlap
+    if (entries[0].isIntersecting === true) {
+      console.log("Element has just become visible in screen");
+
+      observaleSections.forEach(section => section.classList.remove("active"));
+      entries[0].target.classList.toggle("active");
+      console.log("entries[0]: ", entries[0].target);
+    }
+  },
+  { threshold: [0.2] }
+);
+
+// Observable data:
+
+console.log(observaleSections);
+observaleSections.forEach(section => {
+  observer.observe(section);
+});
