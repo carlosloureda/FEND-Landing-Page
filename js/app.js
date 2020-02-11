@@ -354,7 +354,7 @@ document
   .querySelector(".mobile-nav .menu-button")
   .addEventListener("click", () => {
     console.log("clicking on  mobile menu");
-    document.querySelector(".mobile-nav .menu").classList.toggle("hidden");
+    document.querySelector(".mobile-nav .menu").classList.toggle("dissapeared");
   });
 
 document.getElementsByTagName("body")[0].addEventListener("click", () => {
