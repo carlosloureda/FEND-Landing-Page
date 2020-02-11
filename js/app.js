@@ -2,6 +2,9 @@
 ********************************************************************************
 ********************************************************************************
                             MOCKED DATA
+    The following data is the data that would come from an external API or
+    CMS. With this data We are able to make 4 different sections and make them
+    completely dynamic.
 ********************************************************************************
 ********************************************************************************
 ***************************************************************************** */
@@ -185,6 +188,9 @@ const reviewsSection = {
   }
 };
 
+/**
+ * Contains all the data for builing our sections
+ */
 const sectionsData = {
   myServicesSection,
   jobsSection,
@@ -192,24 +198,30 @@ const sectionsData = {
   reviewsSection
 };
 
-const nameOfVar = obj => Object.keys(obj)[0];
+/* *****************************************************************************
+********************************************************************************
+********************************************************************************
+                        ADD DYNAMIC CONTENT
+    - From the Mocked Data from above we are going to add dynamically its content
+    into the HTML document.
+    - We will generate also the navigation of the document dynamically
+********************************************************************************
+********************************************************************************
+***************************************************************************** */
 
 /**
  * Builds and append the `services` section
- * @param {object} myServicesSection - The object containing the information required
+ * @param {object} sectionData - The object containing the information required
  */
-const buildServicesSection = myServicesSection => {
+const buildServicesSection = sectionData => {
   const main = document.getElementById("main-body");
 
-  // TODO: add CSS for each element
-
-  // TODO: create an article with name of the id
   const servicesSection = document.createElement("section");
-  servicesSection.id = myServicesSection.id;
-  servicesSection.classList = myServicesSection.id;
+  servicesSection.id = sectionData.id;
+  servicesSection.classList = sectionData.id;
 
   const title = document.createElement("h1");
-  title.textContent = myServicesSection.title;
+  title.textContent = sectionData.title;
 
   // Create a div for the subsections
   const serviceSection = document.createElement("div");
@@ -252,7 +264,6 @@ const buildServicesSection = myServicesSection => {
 
   const footer = document.querySelector("footer");
   footer.parentNode.insertBefore(servicesSection, footer);
-  // main.appendChild(serviceSection);
 };
 
 /**
@@ -321,7 +332,6 @@ const buildJobsSection = sectionData => {
  * Builds and append the `projects` section
  * @param {object} sectionData - The object containing the information required
  */
-
 const buildProjectsSection = sectionData => {
   // TODO: create an article with name of the id
   const mainSection = document.createElement("section");
@@ -376,8 +386,11 @@ const buildProjectsSection = sectionData => {
   footer.parentNode.insertBefore(mainSection, footer);
 };
 
+/**
+ * Builds and append the `reviews` section
+ * @param {object} sectionData - The object containing the information required
+ */
 const buildReviewsSection = sectionData => {
-  // TODO: create an article with name of the id
   const mainSection = document.createElement("section");
   mainSection.id = sectionData.id;
   mainSection.classList = sectionData.id;
@@ -436,6 +449,11 @@ const buildReviewsSection = sectionData => {
   footer.parentNode.insertBefore(mainSection, footer);
 };
 
+/**
+ * Builds all the sections
+ * @param {objects} sectionsData - The object containing the information for
+ *                    adding all the sections to our page dynamically
+ */
 const buildSections = sectionsData => {
   buildServicesSection(sectionsData.myServicesSection);
   buildJobsSection(sectionsData.jobsSection);
@@ -443,6 +461,11 @@ const buildSections = sectionsData => {
   buildReviewsSection(sectionsData.reviewsSection);
 };
 
+/**
+ * Builds dynamically the header
+ * @param {objects} sectionsData - The object containing the information for
+ *                    adding all the elements to our header
+ */
 const buildHeader = sectionsData => {
   // Medium-large devises nav
   greedyNavUl = document.getElementById("visible-links");
@@ -451,7 +474,6 @@ const buildHeader = sectionsData => {
   mobileNavUl = document.getElementById("mobile-nav--menu");
 
   Object.values(sectionsData).forEach(element => {
-    console.log("asdas");
     li = document.createElement("li");
     a = document.createElement("a");
     a.classList = "nav-link text-uppercase";
@@ -527,6 +549,10 @@ scrollToTopHanlder("scroll-top-btn");
 ********************************************************************************
 ********************************************************************************
                         RESPONSIVE NAVBAR FUNCTIONALITY
+        - For tablets/desktop devices I am going to show a dynamic navbar that
+        contracts and shows a menu with an icon with the hidden elements when
+        the menu elements can't fit into the header
+        - For mobile devices just show the hamburguer menu
 ********************************************************************************
 ********************************************************************************
 ***************************************************************************** */
@@ -535,17 +561,13 @@ scrollToTopHanlder("scroll-top-btn");
  * Event handler for showing small/medium devices navbar (navbar-nav responsive) or large
  * devices (navbar-nav)
  */
-// const manageNavbarResponsiveness = () => {
-//   const navBar = document.querySelector(".navbar-nav");
-//   if (navBar.className === "navbar-nav") {
-//     navBar.classList.add("responsive");
-//   } else {
-//     navBar.classList.remove("responsive");
-//   }
-// };
-// document
-//   .getElementById("open-menu")
-//   .addEventListener("click", manageNavbarResponsiveness);
+
+/**
+ * Helper function to get the number of <li> children elements of a <ul> parent
+ * elements. Right now is not used but I leave it here in case I will need it in the future
+ * @param {NodeElement} ulElement  - The <ul> element to search for li children
+ * @return int - The number of li inside ul
+ */
 const getNumberOfLi = ulElement => {
   var liNodes = [];
 
@@ -557,115 +579,120 @@ const getNumberOfLi = ulElement => {
   return liNodes.length;
 };
 
-var nav = document.querySelector(".greedy-nav");
-var btn = document.querySelector(".greedy-nav .menu-button");
-var vlinks = document.querySelector(".greedy-nav .visible-links");
-var hlinks = document.querySelector(".greedy-nav .hidden-links");
-// var nav = document.querySelector(".greedy-nav");
-// var btn = document.querySelector(".greedy-nav .menu-button");
-// var vlinks = document.querySelector(".greedy-nav .visible-links");
-// var hlinks = document.querySelector(".greedy-nav .hidden-links");
-var mobileNav = document.querySelector(".mobile-nav");
+/**
+ * Handles everything related to the greedy navigation.
+ */
+const greedyNavigationHandler = () => {
+  var nav = document.querySelector(".greedy-nav");
+  var btn = document.querySelector(".greedy-nav .menu-button");
+  var vlinks = document.querySelector(".greedy-nav .visible-links");
+  var hlinks = document.querySelector(".greedy-nav .hidden-links");
+  var mobileNav = document.querySelector(".mobile-nav");
 
-var breaks = [];
+  var breaks = [];
 
-function updateNav() {
-  if (getComputedStyle(mobileNav, null).display !== "none") {
-    // console.log("not nav");
-    return;
-  }
-  console.log("updating");
-  var availableSpace = btn.classList.contains("hidden")
-    ? nav.offsetWidth
-    : nav.offsetWidth - btn.offsetWidth - 30;
+  const updateNav = () => {
+    // When showing the mobile nav bar we dont want to do updates
+    if (getComputedStyle(mobileNav, null).display !== "none") {
+      return;
+    }
+    var availableSpace = btn.classList.contains("hidden")
+      ? nav.offsetWidth
+      : nav.offsetWidth - btn.offsetWidth - 30;
 
-  // The visible list is overflowing the nav
-  if (vlinks.offsetWidth > availableSpace) {
-    // Record the width of the list
-    breaks.push(vlinks.offsetWidth);
+    // The visible list is overflowing the nav
+    if (vlinks.offsetWidth > availableSpace) {
+      // Record the width of the list
+      breaks.push(vlinks.offsetWidth);
 
-    // Move item to the hidden list
-    hlinks.prepend(vlinks.lastChild);
+      // Move item to the hidden list
+      hlinks.prepend(vlinks.lastChild);
 
-    // Show the dropdown btn
-    if (btn.classList.contains("hidden")) {
-      btn.classList.remove("hidden");
+      // Show the dropdown btn
+      if (btn.classList.contains("hidden")) {
+        btn.classList.remove("hidden");
+      }
+
+      // The visible list is not overflowing
+    } else {
+      // There is space for another item in the nav
+      if (availableSpace > breaks[breaks.length - 1]) {
+        // Move the item to the visible list
+        vlinks.appendChild(hlinks.firstChild);
+        breaks.pop();
+      }
+
+      // Hide the dropdown btn if hidden list is empty
+      // if (breaks.length < 2) {
+      if (!getNumberOfLi(hlinks)) {
+        btn.classList.add("hidden");
+        hlinks.classList.add("hidden");
+      }
     }
 
-    // The visible list is not overflowing
-  } else {
-    // There is space for another item in the nav
-    if (availableSpace > breaks[breaks.length - 1]) {
-      // Move the item to the visible list
-      vlinks.appendChild(hlinks.firstChild);
-      breaks.pop();
+    // Keep counter updated
+    btn.setAttribute("count", breaks.length);
+    // Recur if the visible list is still overflowing the nav
+    if (vlinks.offsetWidth > availableSpace) {
+      updateNav();
     }
+  };
 
-    // Hide the dropdown btn if hidden list is empty
-    // if (breaks.length < 2) {
-    if (!getNumberOfLi(hlinks)) {
-      btn.classList.add("hidden");
-      hlinks.classList.add("hidden");
-    }
-  }
+  // Window listeners
 
-  // Keep counter updated
-  // btn.setAttribute("count", Math.round(breaks.length / 2));
-  btn.setAttribute("count", breaks.length);
-  // Recur if the visible list is still overflowing the nav
-  if (vlinks.offsetWidth > availableSpace) {
-    updateNav();
-  }
-  // console.log("getNumberOfLi: ", getNumberOfLi(hlinks));
-}
-
-// Window listeners
-window.addEventListener("resize", () => updateNav());
-btn.addEventListener("click", e => {
-  e.stopPropagation();
-  hlinks.classList.toggle("hidden");
-});
-
-updateNav();
-
-document
-  .querySelector(".mobile-nav .menu-button")
-  .addEventListener("click", () => {
-    console.log("clicking on  mobile menu");
-    document.querySelector(".mobile-nav .menu").classList.toggle("dissapeared");
+  window.addEventListener("resize", updateNav);
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
+    hlinks.classList.toggle("hidden");
   });
 
-document.getElementsByTagName("body")[0].addEventListener("click", () => {
-  document.querySelector(".greedy-nav .hidden-links").classList.add("hidden");
-});
-
-console.log("HI!");
-
-const observaleSections = Object.values(sectionsData)
-  // .concat({ id: "home" })
-  .map(section => {
-    console.log("section: ", section);
-    return document.getElementById(section.id);
+  // When click outside the menu dropdown we want to collapse it
+  document.getElementsByTagName("body")[0].addEventListener("click", () => {
+    document.querySelector(".greedy-nav .hidden-links").classList.add("hidden");
   });
 
-var observer = new IntersectionObserver(
-  function(entries) {
-    // isIntersecting is true when element and viewport are overlapping
-    // isIntersecting is false when element and viewport don't overlap
-    if (entries[0].isIntersecting === true) {
-      console.log("Element has just become visible in screen");
+  updateNav();
+};
 
-      observaleSections.forEach(section => section.classList.remove("active"));
-      entries[0].target.classList.toggle("active");
-      console.log("entries[0]: ", entries[0].target);
-    }
-  },
-  { threshold: [0.2] }
-);
+greedyNavigationHandler();
 
-// Observable data:
+/**
+ * Handles mobile navigation open/close dropdown menu
+ */
+const mobileNavigationHandler = () => {
+  document
+    .querySelector(".mobile-nav .menu-button")
+    .addEventListener("click", () => {
+      document
+        .querySelector(".mobile-nav .menu")
+        .classList.toggle("dissapeared");
+    });
+};
+mobileNavigationHandler();
 
-console.log(observaleSections);
-observaleSections.forEach(section => {
-  observer.observe(section);
-});
+/**
+ * Observer for the 4 dynamic sections to highlight them while scrolling
+ */
+(function() {
+  const observaleSections = Object.values(sectionsData).map(section =>
+    document.getElementById(section.id)
+  );
+
+  const observer = new IntersectionObserver(
+    entries => {
+      // isIntersecting is true when element and viewport are overlapping
+      // isIntersecting is false when element and viewport don't overlap
+      if (entries[0].isIntersecting === true) {
+        observaleSections.forEach(section =>
+          section.classList.remove("active")
+        );
+        entries[0].target.classList.toggle("active");
+      }
+    },
+    { threshold: [0.2] }
+  );
+
+  observaleSections.forEach(section => {
+    observer.observe(section);
+  });
+})();
