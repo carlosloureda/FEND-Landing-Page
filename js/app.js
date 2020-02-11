@@ -205,8 +205,8 @@ const buildServicesSection = myServicesSection => {
 
   // TODO: create an article with name of the id
   const servicesSection = document.createElement("section");
-  servicesSection.id = section.id;
-  servicesSection.classList = section.id;
+  servicesSection.id = myServicesSection.id;
+  servicesSection.classList = myServicesSection.id;
 
   const title = document.createElement("h1");
   title.textContent = myServicesSection.title;
@@ -264,8 +264,8 @@ const buildJobsSection = sectionData => {
 
   // TODO: create an article with name of the id
   const mainSection = document.createElement("section");
-  mainSection.id = section.id;
-  mainSection.classList = section.id;
+  mainSection.id = sectionData.id;
+  mainSection.classList = sectionData.id;
 
   const title = document.createElement("h1");
   title.textContent = sectionData.title;
@@ -325,8 +325,8 @@ const buildJobsSection = sectionData => {
 const buildProjectsSection = sectionData => {
   // TODO: create an article with name of the id
   const mainSection = document.createElement("section");
-  mainSection.id = section.id;
-  mainSection.classList = section.id;
+  mainSection.id = sectionData.id;
+  mainSection.classList = sectionData.id;
 
   // Create the header
   header = document.createElement("header");
@@ -379,8 +379,8 @@ const buildProjectsSection = sectionData => {
 const buildReviewsSection = sectionData => {
   // TODO: create an article with name of the id
   const mainSection = document.createElement("section");
-  mainSection.id = section.id;
-  mainSection.classList = section.id;
+  mainSection.id = sectionData.id;
+  mainSection.classList = sectionData.id;
 
   // Create the header
   title = document.createElement("h1");
@@ -443,6 +443,27 @@ const buildSections = sectionsData => {
   buildReviewsSection(sectionsData.reviewsSection);
 };
 
+const buildHeader = sectionsData => {
+  // Medium-large devises nav
+  greedyNavUl = document.getElementById("visible-links");
+
+  // Mobile nav
+  mobileNavUl = document.getElementById("mobile-nav--menu");
+
+  Object.values(sectionsData).forEach(element => {
+    console.log("asdas");
+    li = document.createElement("li");
+    a = document.createElement("a");
+    a.classList = "nav-link text-uppercase";
+    a.textContent = element.id;
+    a.href = `#${element.id}`;
+
+    li.appendChild(a);
+    greedyNavUl.appendChild(li);
+    mobileNavUl.appendChild(li.cloneNode(true));
+  });
+};
+buildHeader(sectionsData);
 buildSections(sectionsData);
 
 /* *****************************************************************************
@@ -589,7 +610,8 @@ function updateNav() {
   }
 
   // Keep counter updated
-  btn.setAttribute("count", Math.round(breaks.length / 2));
+  // btn.setAttribute("count", Math.round(breaks.length / 2));
+  btn.setAttribute("count", breaks.length);
   // Recur if the visible list is still overflowing the nav
   if (vlinks.offsetWidth > availableSpace) {
     updateNav();
