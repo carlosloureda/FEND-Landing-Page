@@ -3,6 +3,11 @@
                 Common design for all the devices
 ********************************************************************************
 ****************************************************************************** */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Poppins, sans-serif; /*TODO: work on the default font ...*/
